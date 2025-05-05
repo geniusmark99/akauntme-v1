@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { motion } from 'framer-motion';
@@ -115,7 +115,6 @@ const items = [
 const HomeSliderWidget = () => {
 
     const [openPopup, setOpenPopup] = useState<{ [key: number]: string | null }>({});
-    const [isMobile, setIsMobile] = useState(false);
 
     const handleSlideClick = (swiperIndex: number, content: string) => {
         setOpenPopup((prevState) => ({
@@ -131,15 +130,7 @@ const HomeSliderWidget = () => {
         }));
     };
 
-    useEffect(() => {
-        const checkMobile = () => {
-            setIsMobile(window.innerWidth <= 768); // mobile if width <= 768px
-        };
 
-        checkMobile(); // Initial check
-        window.addEventListener('resize', checkMobile);
-        return () => window.removeEventListener('resize', checkMobile);
-    }, []);
 
     return (
         <div className=" w-full z-[100]">
