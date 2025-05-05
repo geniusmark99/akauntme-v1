@@ -20,9 +20,8 @@ const Login = () => {
         <>
             <AuthCard
                 LeftPane={
-                    <div className='flex justify-center flex-col items-center gap-y-10  py-20 '>
+                    <div className='flex justify-center flex-col items-center gap-y-10  py-5 md:py-10 lg:py-20 '>
                         <div className='flex justify-center flex-col items-center gap-y-5'>
-
                             <LogoIcon className='fill-blue-500 size-10' type='alone' />
                             <div className='text-center'>
                                 <h1 className='text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-akauntme to-blue-400'>Sign In to Akauntme</h1>
@@ -55,8 +54,6 @@ const Login = () => {
                             <div className="before:content-[''] before:right-0 before:absolute before:w-3/12 lg:before:w-4/12 before:h-[0.5px] before:bg-neutral-300"></div>
 
                         </div>
-
-                        {/* onSubmit={submit} */}
 
                         <form className='w-full justify-center flex flex-col items-center gap-y-5'>
                             <div className='w-full flex justify-center'>
@@ -114,11 +111,13 @@ const Login = () => {
                             <button type='submit' className="flex justify-center bg-gradient-to-tr from-akauntme to-blue-400 font-semibold lg:text-xl py-3 rounded-lg shadow-lg shadow-akauntme/70 transition-all hover:scale-95 w-9/12 md:w-6/12 text-center text-white">
                                 Sign In
                             </button>
+
+                            <div>
+                                Don&apos;t have an account? <Link href="/register" className="text-akauntme hover:underline cursor-pointer">Sign Up</Link>
+                            </div>
                         </form>
 
-                        <div>
-                            Don&apos;t have an account? <Link href="/register" className="text-akauntme font-semibold">Sign Up</Link>
-                        </div>
+
 
                     </div>
                 }
