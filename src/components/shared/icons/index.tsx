@@ -1,3 +1,5 @@
 import LogoIcon from "./LogoIcon";
+import OverwhelmingIcon from "./OverwhelmingIcon";
+import BusinessFinanceIcon from "./BusinessFinanceIcon";
 
-export { LogoIcon }
+export { LogoIcon, OverwhelmingIcon, BusinessFinanceIcon }

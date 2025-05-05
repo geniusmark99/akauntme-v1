@@ -195,22 +195,13 @@ export default function Home() {
                 <Link className="group text-sm lg:text-xl inline-flex shadow-md hover:scale-[.97] transition-transform items-center justify-center rounded-2xl py-2 md:py-3 px-7
                             focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-white 
                               hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900"
-                  color="slate" href="/register">
+                  color="slate" href="/login">
                   <span className="bg-gradient-to-r bg-clip-text from-indigo-600 to-blue-500 text-transparent">
                     Get Started.
                   </span>
                 </Link>
 
-                {/* <button className="group text-xs sm:text-base lg:text-xl inline-flex shadow-md hover:translate-y-0.5 transition-transform ring-1 items-center justify-center rounded-full py-2 
-                md:py-3 px-7   cursor-pointer
-                            focus:outline-none ring-slate-200 text-slate-700 hover:text-slate-900 bg-white hover:ring-slate-300 
-                            active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300"
-                  color="slate" onClick={() => showVideoPopup(!videoPopup)}>
-                  <svg className="h-3 w-3 flex-none fill-akauntme-deep group-active:fill-current">
-                    <path d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z"></path>
-                  </svg>
-                  <span className="ml-3  text-akauntme-deep">See how?</span>
-                </button> */}
+
 
               </div>
 
@@ -259,7 +250,7 @@ export default function Home() {
           </div>
 
           <div className="w-full flex justify-center">
-            <Image src="/images/preview-template.png" className="lg:rounded-3xl lg:h-full" priority alt="Dashboard Image" width={1000} height={1000} />
+            <Image src="/images/preview-template.png" className="lg:rounded-3xl lg:h-full" priority alt="Dashboard Image" width={1000} height={1000} style={{ width: "auto", height: "auto" }} />
           </div>
 
         </div>
@@ -340,7 +331,6 @@ backdrop-filter backdrop-blur-lg bg-opacity-30
 border border-white/20 tracking-wider">
                   Learn more
 
-                  {/* <svg className="size-7 -top-2 right-0 absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><linearGradient id="eTt4_F5~sRFQTjUQtW5_ya" x1="7.4" x2="11.6" y1="36.724" y2="43.192" gradientTransform="rotate(45.001 9 39)" gradientUnits="userSpaceOnUse"><stop offset="0" stopColor="#f44f5a" /><stop offset=".443" stopColor="#ee3d4a" /><stop offset="1" stopColor="#e52030" /></linearGradient><path fill="url(#eTt4_F5~sRFQTjUQtW5_ya)" d="M11.121,41.121c-1.172,1.172-6.243,2-6.243,2s0.828-5.071,2-6.243c1.172-1.172,3.071-1.172,4.243,0C12.293,38.05,12.293,39.95,11.121,41.121z" /><linearGradient id="eTt4_F5~sRFQTjUQtW5_yb" x1="7.043" x2="9.8" y1="40.957" y2="38.2" gradientUnits="userSpaceOnUse"><stop offset="0" stopColor="#ffcf7b" /><stop offset=".195" stopColor="#fecd76" /><stop offset=".439" stopColor="#fac666" /><stop offset=".71" stopColor="#f3bc4d" /><stop offset=".997" stopColor="#eaad29" /><stop offset="1" stopColor="#eaad29" /></linearGradient><path fill="url(#eTt4_F5~sRFQTjUQtW5_yb)" d="M10.121,40C9.536,40.586,7,41,7,41s0.414-2.536,1-3.121c0.586-0.586,1.536-0.586,2.121,0C10.707,38.464,10.707,39.414,10.121,40z" /><path fill="#199be2" d="M12.066,38.707l-2.773-2.773c-0.352-0.352-0.391-0.909-0.093-1.307l2.48-3.306l5,5l-3.306,2.48C12.975,39.099,12.418,39.059,12.066,38.707z" /><path fill="#50e6ff" d="M41.747,5.055C39.595,5.208,35.211,5.789,33,8l-0.828,0.828l7,7L40,15c2.211-2.211,2.792-6.595,2.945-8.747C42.994,5.568,42.432,5.006,41.747,5.055z" /><rect width="31.113" height="9.899" x="9.944" y="17.55" fill="#35c1f1" transform="rotate(-45.001 25.5 22.5)" /><path fill="#50e6ff" d="M11,30l-0.414,0.414c-0.781,0.781-0.781,2.047,0,2.828l4.172,4.172c0.781,0.781,2.047,0.781,2.828,0L18,37L11,30z" /><circle cx="30.5" cy="17.5" r="3.5" fill="#50e6ff" /><circle cx="30.5" cy="17.5" r="2.5" fill="#0078d4" /><circle cx="23.5" cy="24.5" r="3.5" fill="#50e6ff" /><circle cx="23.5" cy="24.5" r="2.5" fill="#0078d4" /><path fill="#199be2" d="M24,31v6.757c0,0.796-0.316,1.559-0.879,2.121L20,43l-2-6L24,31z" /><path fill="#199be2" d="M17,24h-6.757c-0.796,0-1.559,0.316-2.121,0.879L5,28l6,2L17,24z" /></svg> */}
                 </Link>
               </div>
 

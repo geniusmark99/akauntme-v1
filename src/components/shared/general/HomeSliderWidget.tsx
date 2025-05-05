@@ -92,6 +92,8 @@ const items = [
         ], valueDesc: 'Payment', bg: 'from-rose-500 to-red-500',
         bgImg: '/images/tester-2.webp',
         bgImgMob: '/images/tester-mobile-2.webp',
+        comingSoon: true
+
 
     },
 
@@ -104,7 +106,7 @@ const items = [
         ], valueDesc: 'MarketMe', bg: 'from-cyan-500 to-indigo-500',
         bgImg: '/images/tester-4.webp',
         bgImgMob: '/images/tester-mobile-4.webp',
-
+        comingSoon: true
     },
 
 
@@ -155,12 +157,19 @@ const HomeSliderWidget = () => {
                     },
                 }}
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
-
                 loop
                 className="w-full mt-20 mx-auto flex justify-center items-center h-auto py-20"
             >
                 {items.map((item, swiperIndex) => (
                     <SwiperSlide key={item.id} className='w-full'>
+                        <div className='flex justify-center items-center'>
+
+                            {item.comingSoon ?
+                                <div className='text-white h-10 px-4 bg-linear-90 from-teal-600 to-emerald-600 rounded-full text-center flex justify-center items-center'>Coming soon</div> : <div className=' h-10'></div>
+
+                            }
+                        </div>
+
                         <div
                             className={`h-[200px] bg-no-repeat bg-center bg-cover opacity-90 bg-gradient-to-r ${item.bg} scale-95 transition-all hover:scale-100 lg:h-[300px]  text-akauntme-2 flex items-center justify-center rounded-xl cursor-pointer`}
                             onClick={() => handleSlideClick(swiperIndex, item.valueDesc)}

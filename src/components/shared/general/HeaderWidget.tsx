@@ -128,10 +128,7 @@ const HeaderWidget = () => {
 
                     <div className='flex gap-x-1 items-center'>
                         <div className={` ${isScrolled ? 'border-akauntme-deep/50' : ''} shadow-md bg-white flex items-center p-1 rounded-full relative h-full border border-transparent hover:border-akauntme-deep/50`}>
-                            <path
-                                className='fill-white w-full h-full'
-                                d=" M121.42523532602432 31.907926391718238 C125.04404058194723 27.106722602207157, 129.83095655702985 27.10672260220716, 133.44976181295274 31.90792639171824 L133.44976181295274 7.929575134160663 C129.83095655702985 12.730778923671743, 125.04404058194723 12.73077892367175, 121.42523532602432 7.929575134160668 Z "
-                            />
+
                             <Link href="/login" className={` ${isScrolled ? 'text-akauntme-deep hover:text-white hover:bg-gradient-to-tr from-blue-600 to-akauntme-2' : 'bg-gradient-to-tr from-blue-600 to-akauntme-2 text-white'} 
                         rounded-full px-2 py-0.5`}>Login</Link>
                         </div>
