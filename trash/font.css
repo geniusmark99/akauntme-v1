@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Canva Sans';
+    src: url("/Fonts/CanvaSans-Bold.woff2") format("woff2"), url("/Fonts/CanvaSans-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Canva Sans';
+    src: url("/Fonts/CanvaSans-Medium.woff2") format("woff2"), url("/Fonts/CanvaSans-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Canva Sans';
+    src: url("/Fonts/CanvaSans-Regular.woff2") format("woff2"), url("/Fonts/CanvaSans-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Canva Sans Display';
+    src: url("/Fonts/CanvaSansDisplay-Bold.woff2") format("woff2"), url("/Fonts/CanvaSansDisplay-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
+}

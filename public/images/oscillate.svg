@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 2400 800">
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="oooscillate-grad">
+            <stop stop-color="#3558e3" stop-opacity="1" offset="0%"></stop>
+            <stop stop-color="hsl(0, 0%, 100%)" stop-opacity="1" offset="100%"></stop>
+        </linearGradient>
+        <!-- 
+        <style>
+            @keyframes oscillate {
+                0% {
+                    d: path("M 0 456 Q 600 325 1200 400 Q 1800 475 2400 456");
+                    opacity: 0.68;
+                }
+
+                25% {
+                    d: path("M 0 432 Q 600 325 1200 400 Q 1800 475 2400 432");
+                    opacity: 0.61;
+                }
+
+                50% {
+                    d: path("M 0 408 Q 600 325 1200 400 Q 1800 475 2400 408");
+                    opacity: 0.71;
+                }
+
+                75% {
+                    d: path("M 0 384 Q 600 325 1200 400 Q 1800 475 2400 384");
+                    opacity: 0.48;
+                }
+
+                100% {
+                    d: path("M 0 360 Q 600 325 1200 400 Q 1800 475 2400 360");
+                    opacity: 0.35;
+                }
+            }
+
+            path {
+                animation: oscillate 5s ease-in-out infinite;
+            }
+        </style> -->
+    </defs>
+    <g stroke-width="1" stroke="url(#oooscillate-grad)" fill="none" stroke-linecap="round">
+        <path d="M 0 456 Q 600 325 1200 400 Q 1800 475 2400 456" opacity="0.68"></path>
+        <path d="M 0 432 Q 600 325 1200 400 Q 1800 475 2400 432" opacity="0.61"></path>
+        <path d="M 0 408 Q 600 325 1200 400 Q 1800 475 2400 408" opacity="0.71"></path>
+        <path d="M 0 384 Q 600 325 1200 400 Q 1800 475 2400 384" opacity="0.48"></path>
+        <path d="M 0 360 Q 600 325 1200 400 Q 1800 475 2400 360" opacity="0.35"></path>
+        <path d="M 0 336 Q 600 325 1200 400 Q 1800 475 2400 336" opacity="0.82"></path>
+        <path d="M 0 312 Q 600 325 1200 400 Q 1800 475 2400 312" opacity="0.51"></path>
+        <path d="M 0 288 Q 600 325 1200 400 Q 1800 475 2400 288" opacity="0.63"></path>
+        <path d="M 0 264 Q 600 325 1200 400 Q 1800 475 2400 264" opacity="0.72"></path>
+        <path d="M 0 240 Q 600 325 1200 400 Q 1800 475 2400 240" opacity="0.58"></path>
+        <path d="M 0 216 Q 600 325 1200 400 Q 1800 475 2400 216" opacity="0.64"></path>
+        <path d="M 0 192 Q 600 325 1200 400 Q 1800 475 2400 192" opacity="0.81"></path>
+        <path d="M 0 168 Q 600 325 1200 400 Q 1800 475 2400 168" opacity="0.18"></path>
+        <path d="M 0 144 Q 600 325 1200 400 Q 1800 475 2400 144" opacity="0.83"></path>
+        <path d="M 0 120 Q 600 325 1200 400 Q 1800 475 2400 120" opacity="0.95"></path>
+        <path d="M 0 96 Q 600 325 1200 400 Q 1800 475 2400 96" opacity="0.14"></path>
+        <path d="M 0 72 Q 600 325 1200 400 Q 1800 475 2400 72" opacity="0.12"></path>
+        <path d="M 0 48 Q 600 325 1200 400 Q 1800 475 2400 48" opacity="0.58"></path>
+    </g>
+</svg>

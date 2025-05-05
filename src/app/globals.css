@@ -1,26 +1,392 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
+
+@theme {
+    --color-akauntme: #5E56FF;
+    --color-akauntme-2: #42ABFA;
+    --color-akauntme-3: rgb(64 67 220);
+    --color-akauntme-deep: #0070F0;
+    --color-akauntme-deep-2: #4144DE;
+    --color-akauntme-dark: #10101B;
+    --color-akauntme-dark-2: #1A1A2B;
+    --viewport-height: 200%;
+    --Canva-Sans: 'Canva Sans';
+    --Canva-Sans-Display: 'Canva Sans Display';
+    --animate-marquee: marquee 20s linear infinite;
+    --fade-left-bg: linear-gradient(90deg, rgba(81, 103, 246, 1) 0%, rgba(81, 103, 246, 0.01) 100%);
+    --fade-right-bg: linear-gradient(90deg, rgba(14, 106, 228, 0.01) 0%, rgba(14, 106, 228, 1) 100%);
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%)
+        }
+
+        100% {
+            transform: translateX(-50%)
+        }
+
+
+    }
+
+
+
+
+}
+
+
+@font-face {
+    font-family: 'Canva Sans';
+    src: url("/fonts/CanvaSans-Bold.woff2") format("woff2"), url("/fonts/CanvaSans-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Canva Sans';
+    src: url("/fonts/CanvaSans-Medium.woff2") format("woff2"), url("/fonts/CanvaSans-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Canva Sans';
+    src: url("/fonts/CanvaSans-Regular.woff2") format("woff2"), url("/fonts/CanvaSans-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Canva Sans Display';
+    src: url("/fonts/CanvaSansDisplay-Bold.woff2") format("woff2"), url("/fonts/CanvaSansDisplay-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
+}
+
+
+
+
+
+.pause-marquee {
+    animation-play-state: paused !important;
+}
+
+
+.fade-effect-left {
+    background-image: var(--fade-left-bg);
+    position: absolute;
+    z-index: 1;
+    width: 154px;
+    left: 0;
+    height: 60px;
+}
+
+.fade-effect-right {
+    background-image: var(--fade-right-bg);
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    width: 154px;
+    height: 60px;
+}
+
+
+.fade-effect-left-sm {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 5%, rgba(255, 255, 255, 0.01) 100%);
+    position: absolute;
+    z-index: 1;
+    width: 20px;
+    left: 0;
+    height: 48px;
+}
+
+
+.fade-effect-right-sm {
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 1) 100%);
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    width: 20px;
+    height: 48px;
+}
+
+
+.akauntme-focus-attract-intention::after,
+.akauntme-focus-attract-intention::before {
+    background-image: radial-gradient(circle at center, #00c4cc 8px, transparent 0), radial-gradient(circle at center, #00c4cc 8px, transparent 0);
+    background-position: top, bottom;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.bg-large-logo {
+    position: relative;
+    z-index: 2;
+}
+
+.bg-large-logo::after {
+    position: absolute;
+    bottom: -100px;
+    content: '';
+    width: 100%;
+    opacity: 0.2;
+    height: 400px;
+    background-image: url('/large-logo.svg');
+    background-size: contain;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width:700px) {
+    .bg-large-logo::after {
+        bottom: 10px;
+    }
+}
+
+
+span.swiper-pagination-bullet {
+
+    width: 5px;
+    height: 5px;
+    border-radius: 9999px;
+    opacity: 1;
+    border: 2px solid transparent;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: background 0.3s, transform 0.3s;
+    will-change: width;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 15px;
+    height: 5px;
+    border-radius: 100px;
+    background: #fff;
+    border-color: #fff;
+}
+
+.swiper-pagination-bullet:hover,
+.swiper-pagination-bullet-active {
+    background: #fff;
+    border-color: #fff;
+    transform: scale(1.2);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 2px solid #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+.mobile-custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.mobile-custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+
+.mobile-custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 2px solid #f1f1f1;
+    visibility: hidden;
+
+}
+
+.mobile-custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    visibility: visible;
+}
+
+
+/* :root {
+--foreground-rgb: 0, 0, 0;
+--background-start-rgb: 214, 219, 220;
+--background-end-rgb: 255, 255, 255;
+} */
+
+/* @media (prefers-color-scheme: dark) {
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+--foreground-rgb: 255, 255, 255;
+--background-start-rgb: 0, 0, 0;
+--background-end-rgb: 0, 0, 0;
+}
+} */
+
+/* body {
+color: rgb(var(--foreground-rgb));
+background: linear-gradient(
+to bottom,
+transparent,
+rgb(var(--background-end-rgb))
+)
+rgb(var(--background-start-rgb));
+} */
+
+/* @layer utilities {
+.text-balance {
+text-wrap: balance;
+}
+} */
+
+
+@keyframes gradient-x {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 6s ease infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@layer utilities {
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    .border-b-none {
+        border-bottom: none;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        @apply dark:bg-akauntme-dark
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        @apply dark:bg-akauntme-dark-2 dark:border-akauntme-dark
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        @apply dark:bg-akauntme-dark-2
+    }
+
+
+    .mobile-custom-scrollbar::-webkit-scrollbar-track {
+        @apply dark:bg-akauntme-dark
+    }
+
+    .mobile-custom-scrollbar::-webkit-scrollbar-thumb {
+        @apply dark:bg-akauntme-dark-2 dark:border-akauntme-dark
+    }
+
+    .mobile-custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        @apply dark:bg-akauntme-dark-2
+    }
+
+
+    .glassmorphism {
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+
+
+    .account_type_next_btn {
+        @apply py-2 px-3 flex items-center justify-center bg-akauntme transition-all shadow-md shadow-akauntme/20 w-full lg:w-4/12 text-white rounded-lg mt-4 border-none outline-none focus:outline-none focus:border-none focus:ring-0 font-semibold
+    }
+
+
+
+    .account_type_next_btn svg {
+        @apply size-4 fill-white translate-x-0 opacity-0 transition-transform
+    }
+
+    .account_type_next_btn:hover svg {
+        @apply translate-x-2 opacity-100 transition-transform
+    }
+
+    .account_type_option {
+        @apply flex border-2 cursor-pointer *:hover:text-akauntme *:text-gray-700 border-transparent transition-all hover:bg-blue-200/20 hover:border-akauntme items-center lg:justify-start gap-x-4 lg:gap-x-10 max-w-sm shadow-md shadow-akauntme/10 p-4 rounded-xl
+    }
+
+    .account_type_option .account_content {
+        @apply border-2 border-akauntme/50 transition-all
+    }
+
+    .account_type_option:hover .account_content {
+        @apply bg-akauntme border-transparent transition-all
+    }
+
+    .account_content svg {
+        @apply fill-akauntme
+    }
+
+    .account_type_option:hover .account_content svg {
+        @apply fill-white
+    }
+
+    .account_type_option.active {
+        @apply text-akauntme bg-blue-200/20 border-akauntme *:text-akauntme
+    }
+
+    .account_type_option .account_content {
+        @apply border-2 border-akauntme/50 transition-all
+    }
+
+    .account_type_option.active .account_content,
+    .account_type_option:hover .account_content {
+        @apply bg-akauntme border-transparent transition-all
+    }
+
+    .account_content svg {
+        @apply fill-akauntme
+    }
+
+    .account_type_option.active .account_content svg,
+    .account_type_option:hover .account_content svg {
+        @apply fill-white
+    }
+
+
+    .desktop-link {
+        @apply flex gap-x-4 mx-3 px-6 items-center text-white dark:text-gray-300 hover:bg-white hover:dark:bg-akauntme-dark-2 hover:text-akauntme hover:dark:text-gray-300 py-1.5 cursor-pointer rounded-md text-base font-medium
+    }
+
+    .desktop-link svg {
+        @apply fill-white dark:fill-gray-300
+    }
+
+
+    .desktop-link:hover svg,
+    .desktop-link.active svg {
+        @apply fill-akauntme dark:fill-gray-300
+    }
+
+    .desktop-link.active .link-svg-container,
+    .desktop-link:hover .link-svg-container {
+        @apply rotate-[20deg] transition-transform
+    }
+
+    .desktop-link.active {
+        @apply bg-white text-akauntme dark:bg-akauntme-dark-2 dark:text-gray-300
+    }
 }
