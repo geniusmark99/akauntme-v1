@@ -1,10 +1,9 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const items = [
@@ -116,6 +115,7 @@ const items = [
 const HomeSliderWidget = () => {
 
     const [openPopup, setOpenPopup] = useState<{ [key: number]: string | null }>({});
+    const [isMobile, setIsMobile] = useState(false);
 
     const handleSlideClick = (swiperIndex: number, content: string) => {
         setOpenPopup((prevState) => ({
@@ -131,11 +131,21 @@ const HomeSliderWidget = () => {
         }));
     };
 
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 768); // mobile if width <= 768px
+        };
+
+        checkMobile(); // Initial check
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     return (
         <div className=" w-full z-[100]">
 
             <Swiper
-                modules={[Pagination]}
+                modules={[Pagination, Autoplay]}
                 spaceBetween={20}
                 pagination={{ clickable: true }}
                 breakpoints={{
@@ -153,6 +163,9 @@ const HomeSliderWidget = () => {
                         slidesPerView: 7,
                     },
                 }}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
+
+                loop
                 className="w-full mt-20 mx-auto flex justify-center items-center h-auto py-20"
             >
                 {items.map((item, swiperIndex) => (

@@ -106,7 +106,7 @@ export default function Home() {
     <>
       <main className="font-(family-name:--Canva-Sans)">
         <div className='shadow-md h-auto lg:h-screen bg-gradient-to-r from-akauntme-2 via-akauntme to-blue-600'>
-          <div
+          {/* <div
             style={{
               bottom: "calc(100% - min(var(--viewport-height, 100%), 100%) - .5px)",
               flex: "none",
@@ -131,7 +131,7 @@ export default function Home() {
                 borderRadius: 0,
               }}
             ></div>
-          </div>
+          </div> */}
 
           <HeaderWidget />
 
@@ -305,7 +305,7 @@ export default function Home() {
              border border-white/20 flex flex-col lg:flex-row  justify-center items-center">
               <div className="w-full lg:w-6/12">
                 <h1 className="text-center text-2xl md:text-3xl">Optimized for ease of use</h1>
-                <p className="text-left mt-5 md:mt-10 lg:w-[420px] lg:leading-6 font-light leading-10">
+                <p className="text-center md:text-left mt-5 md:mt-10 lg:w-[420px] lg:leading-6 font-light md:leading-10">
                   Akauntme was designed with focus on user-friendly and security of your business data, the system
                   employs robust double layer encryption protocols, regular security updates,and advanced authentication
                   measures to ensure a highly secure environment.
