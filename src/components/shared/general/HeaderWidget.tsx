@@ -278,7 +278,7 @@ const HeaderWidget = () => {
 
                             <li className='py-2 w-full'>
 
-                                <a href="#" className='rounded-full px-2 py-2 w-full  hover:bg-white hover:text-akauntme-deep hover:shadow-md text-white bg-akauntme-deep'>Book Demo</a>
+                                <Link href="/register" className='rounded-full px-2 py-2 w-full  hover:bg-white hover:text-akauntme-deep hover:shadow-md text-white bg-akauntme-deep border border-transparent transition-all hover:border-akauntme-deep'>Register</Link>
 
                             </li>
 

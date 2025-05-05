@@ -165,7 +165,7 @@ const HomeSliderWidget = () => {
                         <div className='flex justify-center items-center'>
 
                             {item.comingSoon ?
-                                <div className='text-white h-10 px-4 bg-linear-90 from-teal-600 to-emerald-600 rounded-full text-center flex justify-center items-center'>Coming soon</div> : <div className=' h-10'></div>
+                                <div className='text-white h-10 px-4 bg-linear-90  from-green-500  to-emerald-500 rounded-full text-center flex justify-center items-center'>Coming soon</div> : <div className=' h-10'></div>
 
                             }
                         </div>
