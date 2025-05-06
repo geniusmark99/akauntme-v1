@@ -105,33 +105,9 @@ export default function Home() {
   return (
     <>
       <main className="font-(family-name:--Canva-Sans)">
-        <div className='shadow-md h-auto lg:h-screen bg-gradient-to-r from-akauntme-2 via-akauntme to-blue-600'>
-          {/* <div
-            style={{
-              bottom: "calc(100% - min(var(--viewport-height, 100%), 100%) - .5px)",
-              flex: "none",
-              left: 0,
-              order: 1008,
-              pointerEvents: "none",
-              position: "fixed",
-              right: 0,
-              top: 0,
-              zIndex: 10,
-            }}
-          >
+        {/* bg-gradient-to-r from-akauntme-2 via-akauntme to-blue-600 */}
+        <div className='shadow-md h-auto lg:h-screen '>
 
-            <div
-              style={{
-                width: "100%",
-                height: "100%",
-                backgroundSize: "200px",
-                backgroundRepeat: "repeat",
-                backgroundImage: "url('/images/grainy-noise.png')",
-                opacity: 0.06,
-                borderRadius: 0,
-              }}
-            ></div>
-          </div> */}
 
           <HeaderWidget />
 
@@ -183,14 +159,20 @@ export default function Home() {
 
             <div className=" w-full mx-2 md:mx-auto lg:mx-6 px-4 sm:px-6 lg:px-8 pb-16 pt-20 text-center lg:pt-32 mt-10 lg:mt-30 rounded-3xl md:rounded-[2rem]" >
               <h1 className="mx-auto max-w-4xl font-display text-4xl sm:text-5xl  md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[50px] 
-                        text-white">
+                        bg-clip-text text-transparent bg-linear-to-r from-akauntme-2 via-akauntme to-blue-600">
                 <div className="lg:leading-18">
-                  <span className="italic">Akaunting </span> made easy for your Business
+                  <span className="italic ">Akaunting </span> made easy for your Business
                 </div>
               </h1>
-              <p className="my-5 text-white italic text-xl md:text-[1.2rem]">
-                From Chaos to Clarity — Akauntme.
-              </p>
+              <div className="flex justify-center items-center">
+
+                <p className="my-5 text-gray-600 italic text-base sm:text-xl md:text-[1.2rem] max-w-md">
+                  {/* From Chaos to Clarity — Akauntme. */}
+                  From inventory to income, invoices to online sales
+                  <span className="italic font-semibold text-indigo-500"> Akauntme </span> handles it all
+                </p>
+              </div>
+
               <div className="lg:mt-10 flex justify-center gap-x-6 " >
                 <Link className="group text-sm lg:text-xl inline-flex shadow-md hover:scale-[.97] transition-transform items-center justify-center rounded-2xl py-2 md:py-3 px-7
                             focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-white 
