@@ -228,7 +228,18 @@ export default function Home() {
 
         <div className="h-[70vh] lg:h-screen bg-white mt-[2rem] lg:mt-[5rem]">
           <div className="flex justify-center items-center">
-            <h1 className="text-center text-transparent font-semibold bg-gradient-to-tl from-blue-600 via-cyan-500 to-teal-600 bg-clip-text text-2xl md:text-3xl lg:text-7xl my-10 lg:my-14 max-w-[400px] lg:max-w-5xl">Try it out and see the ease to scale your business</h1>
+            <h1 className="text-center text-transparent font-semibold  text-2xl md:text-3xl lg:text-7xl my-10 lg:my-14 max-w-[400px] lg:max-w-5xl">
+              <span className="bg-gradient-to-tl from-blue-600 via-cyan-500 to-teal-600 bg-clip-text">
+                Try it out and see the ease to scale your
+              </span>
+
+              <span className="relative ml-3 inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-pink-500">
+                <span className="text-white relative">business</span>
+              </span>
+            </h1>
+
+
+
           </div>
 
           <div className="w-full flex justify-center">

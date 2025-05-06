@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *)); */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
     --color-akauntme: #5E56FF;
     --color-akauntme-2: #42ABFA;
@@ -61,6 +64,18 @@
     font-weight: bold;
     font-style: normal;
     font-display: swap
+}
+
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .pause-marquee {

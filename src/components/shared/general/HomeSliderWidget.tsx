@@ -165,7 +165,7 @@ const HomeSliderWidget = () => {
                         <div className='flex justify-center items-center'>
 
                             {item.comingSoon ?
-                                <div className='text-white h-10 px-4 bg-linear-90  from-green-500  to-emerald-500 rounded-full text-center flex justify-center items-center'>Coming soon</div> : <div className=' h-10'></div>
+                                <div className='text-white h-10 px-4 bg-linear-90  from-green-500  to-emerald-500 rounded-full text-center flex justify-center items-center text-sm md:text-base'>Coming soon</div> : <div className=' h-10'></div>
 
                             }
                         </div>
@@ -194,7 +194,7 @@ const HomeSliderWidget = () => {
                         exit={{ opacity: 0 }}
                     >
                         <motion.div
-                            className="bg-white h-[90%] lg:h-auto relative rounded-2xl shadow-lg sm:w-full md:w-full lg:max-w-3xl mt-30 lg:mt-0  mx-4 z-[6000]"
+                            className="bg-white h-[100%] lg:h-auto relative rounded-2xl shadow-lg sm:w-full md:w-full lg:max-w-3xl mt-30 lg:mt-0  mx-4 z-[6000]"
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             exit={{ scale: 0 }}
