@@ -26,6 +26,10 @@ import NotificationIcon from "./NotificationIcon";
 import NoDataIcon from "./NoDataIcon";
 import ActivitiesIcon from "./ActivitiesIcon";
 import InvoiceIcon from "./InvoiceIcon"
+import DdebtsIcon from "./DdebtsIcon";
+import DExpensesIcon from "./DExpensesIcon";
+import DSalesIcon from "./DSalesIcon";
+import DStockIcon from "./DStockIcon";
 
 export {
     HamburgerIcon, SearchIcon, ProfileIcon, LogoIcon,
@@ -34,5 +38,6 @@ export {
     StocksIcon, LightIcon, DarkIcon, FilterIcon, LinkJoinIcon,
     BusinessFinanceIcon, PersonalFinanceIcon, ApplicationLogo, OverwhelmingIcon,
     ReceiptIcon, MarketplaceIcon, LogoutIcon, NotificationIcon,
-    NoDataIcon, ActivitiesIcon, InvoiceIcon
+    NoDataIcon, ActivitiesIcon, InvoiceIcon, DdebtsIcon,
+    DSalesIcon, DExpensesIcon, DStockIcon
 }

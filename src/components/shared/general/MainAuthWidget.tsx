@@ -2,11 +2,7 @@
 import Link from "next/link";
 import { useState, useEffect, ReactNode, useRef } from "react";
 import { motion, AnimatePresence } from 'framer-motion'
-import {
-    LogoIcon, DashboardIcon, SalesIcon, StocksIcon,
-    ReportsIcon, SettingsIcon, MarketplaceIcon,
-    InvoiceIcon,
-} from "@/components/shared/icons"
+import { LogoIcon, DashboardIcon, SalesIcon, StocksIcon, ReportsIcon, SettingsIcon, MarketplaceIcon, InvoiceIcon, } from "@/components/shared/icons"
 import { usePathname } from "next/navigation";
 import DarkModeWidget from "./DarkModeWidget";
 import GeneralSearchWidget from "./GeneralSearchWidget";
@@ -23,7 +19,7 @@ const MainAuthWidget: React.FC<MainAuthProps> = ({ children, className }) => {
 
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
-
+    const [isAiVisible, setIsAiVisible] = useState(true);
     const [isProfile, setIsProfile] = useState(false);
     const [isNotification, setIsNotification] = useState(false);
     const modalRef = useRef<HTMLDivElement>(null)
@@ -463,7 +459,35 @@ const MainAuthWidget: React.FC<MainAuthProps> = ({ children, className }) => {
                     {children}
 
                 </div>
-                <button className="absolute flex flex-col justify-center items-center right-10 lg:left-[92%] z-[1000] bottom-14 lg:bottom-10 ">
+
+                <div className="absolute bottom-28 sm:bottom-28 right-10">
+                    <AnimatePresence initial={false}>
+                        {isAiVisible ? (
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0 }}
+                                className="w-[250px] h-[300px] sm:w-[300px] bg-linear-90 flex justify-center items-center from-blue-500 to-indigo-600 shadow rounded-2xl"
+                                key="box"
+                            >
+                                <div
+                                    className="w-[245px] h-[295px] sm:w-[295px] bg-white dark:bg-zinc-800 rounded-2xl"
+
+                                >
+
+                                    <div>
+                                        <input type="text" placeholder="" />
+                                    </div>
+
+                                </div>
+                            </motion.div>
+                        ) : null}
+                    </AnimatePresence>
+                </div>
+                <motion.button
+                    onClick={() => setIsAiVisible(!isAiVisible)}
+                    whileTap={{ y: 1 }}
+                    className="absolute flex flex-col justify-center items-center right-10 lg:left-[92%] z-[1000] bottom-14 lg:bottom-10 ">
                     <div className="h-8 hidden mx-10 lg:block">
                         <svg className="size-12" viewBox="0 0 20 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8.02415 5C8.00414 5 7.98413 4.9895 7.96412 4.97899C7.9341 4.95798 7.91409 4.90546 7.9241 4.86345L8.20981 3.74542C8.30437 3.37539 8.1799 2.9838 7.88904 2.73628L7.12839 2.08894C7.07206 2.041 6.99433 1.99474 7.00047 1.92102C7.00103 1.91429 7.00209 1.90765 7.00361 1.90126C7.01361 1.85924 7.05364 1.82773 7.09366 1.82773L8.13688 1.76975C8.53593 1.74757 8.88346 1.48991 9.02064 1.11452L9.36777 0.16458C9.39244 0.0970734 9.41961 0.014202 9.49032 0.00134975C9.49517 0.000468987 9.50005 0 9.50493 0C9.54495 0 9.58497 0.0315126 9.59498 0.0630252L9.97922 1.11452C10.1164 1.48991 10.4639 1.74757 10.863 1.76975L11.9062 1.82773C11.9462 1.82773 11.9862 1.85924 11.9962 1.90126C12.0063 1.94328 11.9962 1.98529 11.9662 2.01681L11.1208 2.73628C10.83 2.9838 10.7055 3.37539 10.8001 3.74542L11.0858 4.86345C11.0958 4.90546 11.0858 4.94748 11.0457 4.97899C11.0427 4.9811 11.0395 4.9831 11.0361 4.98497C10.9732 5.01977 10.9056 4.95868 10.846 4.9184L10.0647 4.39066C9.72646 4.16224 9.2834 4.16224 8.94521 4.39066L8.12109 4.94731C8.0899 4.96837 8.06178 5 8.02415 5Z" />
@@ -479,7 +503,7 @@ const MainAuthWidget: React.FC<MainAuthProps> = ({ children, className }) => {
                             <path d="M9.91556 4.60242L6.38771 10.8551L5.9937 11.5559C5.9937 11.5559 5.98848 11.5611 5.98587 11.5637C5.55533 12.0847 4.90559 12.4182 4.17497 12.4182H0L4.96561 3.78957L5.35962 3.10178C5.35962 3.10178 5.36049 3.10091 5.36223 3.09918L7.04527 0.173462L8.84573 2.95068L9.35716 3.74268L9.91556 4.60242Z" fill="white" />
                         </svg>
                     </div>
-                </button>
+                </motion.button>
 
             </div>
 

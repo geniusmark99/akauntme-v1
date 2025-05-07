@@ -115,22 +115,23 @@ const Learn = () => {
             </div>
 
 
-            <section className="w-full flex lg:flex-row flex-col border-t  h-screen overflow-hidden">
+            <section className="w-full flex lg:flex-row flex-col border-t border-white lg:border-transparent h-screen overflow-hidden">
                 <div className='lg:border-r border-gray-300 h-auto space-x-4 lg:w-2/12 flex items-start lg:block justify-center lg:justify-start overflow-hidden'>
 
                     <div className={`mt-2 pl-2 lg:w-full lg:py-4 text-center lg:text-xl lg:border-b border-${getTabClass(activeTab)} shadow-xs`}>
                         <Link href="/" className='md:hidden flex flex-col gap-y-1 justify-center items-center'>
                             <LogoIcon type='alone' className={`w-10 h-5 fill-${getTabClass(activeTab)}`} />
-                            <p className='text-s'>Learn</p>
+                            <p className={`font-semibold text-${getTabClass(activeTab)}`}>Learn</p>
                         </Link>
 
                         <div className='hidden md:flex justify-center gap-x-1'>
-                            <span className={`italic text-${getTabClass(activeTab)} font-semibold`}>Akauntme</span>Learn
+                            <span className={`italic text-${getTabClass(activeTab)} font-semibold`}>Akauntme</span>
+                            <span className='font-normal'>Learn</span>
                         </div>
 
                     </div>
 
-                    <div className='flex after:opacity-100 after:ml-[-100px] after:w-[100px] after:content-[""] after:bg-linear-to-l after:absolute after:from-red-700 after:to-transparent  w-full relative lg:space-y-10 lg:flex-col justify-between py-2 md:py-4.5 lg:mx-0 overflow-x-auto scrollbar-hide'>
+                    <div className='mt-2.5 mb-2 flex after:opacity-100 after:ml-[-100px] after:w-[100px] after:content-[""] after:bg-linear-to-l after:absolute after:from-red-700 after:to-transparent  w-full relative lg:space-y-10 lg:flex-col justify-between py-2 md:py-4.5 lg:mx-0 overflow-x-auto scrollbar-hide'>
 
 
 
