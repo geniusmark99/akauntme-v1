@@ -8,7 +8,7 @@ const ExpensesLearn = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.3 }}
-        className='h-auto bg-orange-500 lg:w-10/12 text-white p-4 overflow-y-auto'>
+        className='h-dvh bg-orange-500 lg:w-10/12 text-white p-4 overflow-y-auto'>
 
         <section className="flex flex-col md:flex-row w-full md:justify-between">
             <div className="z-30 h-auto">

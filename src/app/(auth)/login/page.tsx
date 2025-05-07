@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { DraggableBackWidget } from '@/components/shared/general';
 
 
 const Login = () => {
@@ -108,9 +109,9 @@ const Login = () => {
 
                             </div>
 
-                            <button type='submit' className="flex justify-center bg-gradient-to-tr from-akauntme to-blue-400 font-semibold lg:text-xl py-3 rounded-lg shadow-lg shadow-akauntme/70 transition-all hover:scale-95 w-9/12 md:w-6/12 text-center text-white">
+                            <Link href="/dashboard" className="flex justify-center bg-gradient-to-tr from-akauntme to-blue-400 font-semibold lg:text-xl py-3 rounded-lg shadow-lg shadow-akauntme/70 transition-all hover:scale-95 w-9/12 md:w-6/12 text-center text-white">
                                 Sign In
-                            </button>
+                            </Link>
 
                             <div>
                                 Don&apos;t have an account? <Link href="/register" className="text-akauntme hover:underline cursor-pointer">Sign Up</Link>
@@ -188,6 +189,8 @@ const Login = () => {
                 }
 
             />
+
+            <DraggableBackWidget />
 
         </>
     );

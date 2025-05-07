@@ -8,7 +8,7 @@ export default function manifest(): MetadataRoute.Manifest {
         start_url: '/',
         display: 'standalone',
         background_color: '#ffffff',
-        theme_color: '#4A9EFC',
+        theme_color: '#ffffff',
         orientation: 'portrait-primary',
         icons: [
             {
@@ -22,7 +22,7 @@ export default function manifest(): MetadataRoute.Manifest {
                 type: 'image/png',
             },
             {
-                src: '/icons/apple-touch-icon.png',
+                src: '/icons/android-chrome-512x512.png',
                 type: 'image/png',
                 sizes: '512x512',
                 purpose: 'maskable',

@@ -9,6 +9,11 @@ import InventorieLearn from './components/InventorieLearn';
 import ReceiptLearn from './components/ReceiptLearn';
 import DebtsLearn from './components/DebtsLearn';
 import ExpensesLearn from './components/ExpensesLearn';
+import { DraggableBackWidget } from '@/components/shared/general';
+
+
+
+
 
 
 interface Tab {
@@ -71,6 +76,10 @@ const tabs: Tab[] = [
 ];
 
 
+
+
+
+
 const Learn = () => {
     const [activeTab, setActiveTab] = useState(tabs[0].name);
 
@@ -98,11 +107,11 @@ const Learn = () => {
     return <>
         <main>
             <div className='hidden'>
-                <div className='fill-akauntme text-akauntme border-akauntme'></div>
-                <div className='fill-blue-500 text-blue-500 border-blue-500'></div>
-                <div className='fill-rose-500 text-rose-500 border-rose-500'></div>
-                <div className='fill-amber-500 text-amber-500 border-amber-500'></div>
-                <div className='fill-orange-500 text-orange-500 border-orange-500'></div>
+                <div className='fill-akauntme text-akauntme border-akauntme hover:bg-akauntme'></div>
+                <div className='fill-blue-500 text-blue-500 border-blue-500 hover:bg-blue-500'></div>
+                <div className='fill-rose-500 text-rose-500 border-rose-500 hover:bg-rose-500'></div>
+                <div className='fill-amber-500 text-amber-500 border-amber-500 hover:bg-amber-500'></div>
+                <div className='fill-orange-500 text-orange-500 border-orange-500 hover:bg-orange-500'></div>
             </div>
 
 
@@ -123,11 +132,7 @@ const Learn = () => {
 
                     <div className='flex after:opacity-100 after:ml-[-100px] after:w-[100px] after:content-[""] after:bg-linear-to-l after:absolute after:from-red-700 after:to-transparent  w-full relative lg:space-y-10 lg:flex-col justify-between py-2 md:py-4.5 lg:mx-0 overflow-x-auto scrollbar-hide'>
 
-                        {/* 
-                        
-                        .YpNl0A:after {
-    background: linear-gradient(to left, var(--C-q6Ig), transparent);
-                        */}
+
 
                         {tabs.map((tab) => (
 
@@ -135,7 +140,7 @@ const Learn = () => {
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.name)}
                                 className={` transition  mx-2 cursor-pointer whitespace-nowrap h-10 md:h-auto  rounded-full  px-3 py-1 lg:p-4 flex items-center gap-x-4 
-                                ${activeTab === tab.name ? `${tab.hover} text-white hover:shadow-gray-300/40` : `bg-transparent text-black hover:shadow-md hover:shadow-teal-300/50 hover:${tab.hover}`} 
+                                ${activeTab === tab.name ? `${tab.hover} text-white hover:shadow-gray-300/40` : `bg-transparent text-black hover:text-white hover:shadow-md hover:shadow-teal-300/50 hover:${tab.hover}`} 
                                 `}
 
                             >
@@ -159,7 +164,11 @@ const Learn = () => {
 
             </section>
 
+
         </main>
+        <DraggableBackWidget />
+
+
 
     </>
 }
