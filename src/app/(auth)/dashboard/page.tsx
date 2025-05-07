@@ -6,8 +6,9 @@ import { MainAuthWidget, CustomPopupWidget } from '@/components/shared/general';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import Image from 'next/image';
 // import { DExpensesIcon, DSalesIcon, DStockIcon, DdebtsIcon, FilterIcon, SearchIcon, NotificationIcon, NoDataIcon } from "@/components/shared/icons";
 
 
@@ -16,17 +17,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 const Dashboard = () => {
 
-    // const [isExpanded, setIsExpanded] = useState(false);
     const [isSaleChart, setIsSaleChart] = useState(false);
-
-
-    // const toggleExpand = () => {
-    //     setIsExpanded(!isExpanded);
-    // };
-
-    // const [items, showItems] = useState(false);
-    // const [newItems, addNewItems] = useState(false);
-    // const [activeTab, setActiveTab] = useState(0);
 
     useEffect(() => {
         document.body.classList.add('overflow-hidden');
@@ -37,20 +28,23 @@ const Dashboard = () => {
     return <>
         <MainAuthWidget>
             <div className="px-5 mt-[70px] lg:mt-[80px]">
-                <div className="flex justify-between items-center ">
-                    <h1 className="text-2xl md:text-3xl font-semibold dark:text-zinc-200">Hi Mark</h1>
+                <div className="flex justify-between items-center pt-2 pb-4">
+                    <h1 className="text-lg sm:text-2xl md:text-3xl flex items-center font-semibold dark:text-zinc-200">Good morning Mark!
 
+                        <Image src="/images/morning-love.png" alt='Morning Greetings love image' style={{ width: "auto", height: "auto" }} width={50} height={50} priority />
 
+                    </h1>
                 </div>
 
 
                 <div className='items-center flex justify-center'>
                     <Swiper
                         className='w-full mt-2  py-10 h-[150px]'
-                        modules={[Navigation, Pagination]}
+                        modules={[Navigation, Pagination, Autoplay]}
                         spaceBetween={30}
                         pagination={{ clickable: true }}
                         navigation={false}
+                        autoplay={{ delay: 5000, disableOnInteraction: false }}
                         breakpoints={{
                             640: {
                                 slidesPerView: 2,
@@ -61,7 +55,7 @@ const Dashboard = () => {
                         }}
                     >
                         <SwiperSlide className=" h-[200px] text-white rounded-xl">
-                            <div className='p-3 shadow-md shadow-indigo-400/20 bg-indigo-400  h-[inherit] rounded-xl'>
+                            <div className='p-3 shadow-md shadow-indigo-400/20 bg-indigo-400 dark:bg-indigo-400/80  h-[inherit] rounded-xl'>
                                 <div className='flex justify-between items-center'>
                                     <div>
                                         <h2 className='text-base lg:text-xl text-indigo-800 font-semibold'>Total Items</h2>
@@ -90,7 +84,7 @@ const Dashboard = () => {
 
 
                         <SwiperSlide className=" h-[200px] text-white rounded-xl">
-                            <div className='p-3 shadow-md shadow-teal-400/20 bg-teal-400  h-[inherit] rounded-xl'>
+                            <div className='p-3 shadow-md shadow-teal-400/20 bg-teal-400 dark:bg-teal-400/80   h-[inherit] rounded-xl'>
                                 <div className='flex justify-between items-center'>
                                     <div>
                                         <h2 className='text-base lg:text-xl text-teal-800 font-semibold'>Inventory value</h2>
@@ -117,7 +111,7 @@ const Dashboard = () => {
                         </SwiperSlide>
 
                         <SwiperSlide className=" h-[200px]  text-white rounded-xl">
-                            <div className='p-3 shadow-md shadow-amber-400/20 bg-amber-400  h-[inherit] rounded-xl'>
+                            <div className='p-3 shadow-md shadow-amber-400/20 bg-amber-400 dark:bg-amber-400/80  h-[inherit] rounded-xl'>
                                 <div className='flex justify-between items-center'>
                                     <div>
                                         <h2 className='text-base lg:text-xl text-amber-800 font-semibold'>Low Stock Items</h2>
@@ -144,7 +138,7 @@ const Dashboard = () => {
 
 
                         <SwiperSlide className=" h-[200px]  text-white rounded-xl">
-                            <div className='p-3 shadow-md shadow-rose-400/20 bg-rose-400  h-[inherit] rounded-xl'>
+                            <div className='p-3 shadow-md shadow-rose-400/20 bg-rose-400 dark:bg-rose-400/80   h-[inherit] rounded-xl'>
                                 <div className='flex justify-between items-center'>
                                     <div>
                                         <h2 className='text-base lg:text-xl text-rose-800 font-semibold'>Out of Stock</h2>

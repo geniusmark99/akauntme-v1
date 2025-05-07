@@ -70,7 +70,7 @@ const CustomPopupWidget: React.FC<PopupModalProps> = ({
                     exit="hidden"
                     onClick={handleAttemptClose}>
                     <motion.div
-                        className="relative bg-white dark:bg-gray-900 w-[95%] max-w-4xl  overflow-hidden rounded-2xl shadow-2xl"
+                        className="relative bg-white dark:bg-zinc-900 w-[95%] max-w-4xl  overflow-hidden rounded-2xl shadow-2xl"
                         variants={variants}
                         initial="hidden"
                         animate="visible"
@@ -83,7 +83,7 @@ const CustomPopupWidget: React.FC<PopupModalProps> = ({
                     <AnimatePresence>
                         {showConfirm && (
                             <motion.div
-                                className="absolute bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl w-11/12 max-w-sm text-center z-[60]"
+                                className="absolute bg-white dark:bg-zinc-800 p-6 rounded-xl shadow-xl w-11/12 max-w-sm text-center z-[60]"
                                 initial={{ scale: 0.8, opacity: 0 }}
                                 animate={{ scale: 1, opacity: 1 }}
                                 exit={{ scale: 0.8, opacity: 0 }}
@@ -92,7 +92,7 @@ const CustomPopupWidget: React.FC<PopupModalProps> = ({
                                 <p className="text-gray-800 text-sm dark:text-white mb-4">{confirmMessage}</p>
                                 <div className="flex justify-center gap-4">
                                     <button
-                                        className="px-4 py-2 rounded-full bg-rose-600 text-white hover:bg-rose-700"
+                                        className="px-4 py-2 rounded-full bg-rose-500 dark:bg-rose-500/80 cursor-pointer text-white hover:bg-rose-700"
                                         onClick={() => {
                                             setShowConfirm(false);
                                             onClose();
@@ -101,7 +101,7 @@ const CustomPopupWidget: React.FC<PopupModalProps> = ({
                                         Confirm
                                     </button>
                                     <button
-                                        className="px-4 py-2 rounded-full bg-green-500 text-white hover:bg-green-600"
+                                        className="px-4 py-2 rounded-full bg-green-500 dark:bg-green-500/80 cursor-pointer text-white hover:bg-green-600"
                                         onClick={() => setShowConfirm(false)}
                                     >
                                         Continue

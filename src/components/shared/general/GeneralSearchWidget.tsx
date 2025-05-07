@@ -80,7 +80,7 @@ const GeneralSearchWidget = () => {
                     onFocus={() => setIsFocused(true)}
                     onBlur={() => setTimeout(() => setIsFocused(false), 100)} // allow mouse click before blur
                     onKeyDown={handleKeyDown}
-                    className="w-full dark:text-zinc-400 bg-white dark:bg-zinc-800 rounded-md lg:w-[500px] caret-indigo-500 dark:caret-zinc-500 border-2 bg-gray-white border-gray-300/20 focus:border-indigo-500 dark:focus:border-zinc-700 indent-[20px] outline-none focus:ring-0 focus:outline-none px-4 text-lg placeholder:text-base dark:placeholder:text-zinc-500 focus:bg-blue-50/30" />
+                    className="w-full py-1 dark:text-zinc-400 bg-white dark:bg-zinc-800 rounded-md lg:w-[500px] caret-indigo-500 dark:caret-zinc-500 border bg-gray-white border-gray-300/20 focus:border-indigo-500 dark:focus:border-zinc-700 indent-[20px] outline-none focus:ring-0 focus:outline-none px-4 text-lg placeholder:text-base dark:placeholder:text-zinc-500 focus:bg-blue-50/30" />
 
 
             </div>
