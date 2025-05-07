@@ -19,7 +19,7 @@ const MainAuthWidget: React.FC<MainAuthProps> = ({ children, className }) => {
 
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
-    const [isAiVisible, setIsAiVisible] = useState(true);
+    // const [isAiVisible, setIsAiVisible] = useState(false);
     const [isProfile, setIsProfile] = useState(false);
     const [isNotification, setIsNotification] = useState(false);
     const modalRef = useRef<HTMLDivElement>(null)
@@ -460,7 +460,7 @@ const MainAuthWidget: React.FC<MainAuthProps> = ({ children, className }) => {
 
                 </div>
 
-                <div className="absolute bottom-28 sm:bottom-28 right-10">
+                {/* <div className="absolute bottom-28 sm:bottom-28 right-10">
                     <AnimatePresence initial={false}>
                         {isAiVisible ? (
                             <motion.div
@@ -471,12 +471,17 @@ const MainAuthWidget: React.FC<MainAuthProps> = ({ children, className }) => {
                                 key="box"
                             >
                                 <div
-                                    className="w-[245px] h-[295px] sm:w-[295px] bg-white dark:bg-zinc-800 rounded-2xl"
+                                    className="w-[245px] relative h-[295px] sm:w-[295px] bg-white dark:bg-zinc-800 rounded-2xl"
 
                                 >
 
-                                    <div>
-                                        <input type="text" placeholder="" />
+                                    <div className="absolute bottom-3 px-3 w-full ">
+
+                                        <div className="w-full py-0.5 px-0.5 mx-auto rounded-lg bg-linear-90 from-blue-600 to-indigo-500 flex items-center gap-x-1">
+
+                                            <input type="text" placeholder="Ask me about your business" className="placeholder:text-sm sm:placeholder:text-base bg-white py-2 mx-auto w-full rounded-lg border border-gray-500 outline-hidden px-2" />
+                                        </div>
+
                                     </div>
 
                                 </div>
@@ -503,7 +508,7 @@ const MainAuthWidget: React.FC<MainAuthProps> = ({ children, className }) => {
                             <path d="M9.91556 4.60242L6.38771 10.8551L5.9937 11.5559C5.9937 11.5559 5.98848 11.5611 5.98587 11.5637C5.55533 12.0847 4.90559 12.4182 4.17497 12.4182H0L4.96561 3.78957L5.35962 3.10178C5.35962 3.10178 5.36049 3.10091 5.36223 3.09918L7.04527 0.173462L8.84573 2.95068L9.35716 3.74268L9.91556 4.60242Z" fill="white" />
                         </svg>
                     </div>
-                </motion.button>
+                </motion.button> */}
 
             </div>
 

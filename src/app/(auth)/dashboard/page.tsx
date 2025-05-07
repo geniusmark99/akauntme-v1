@@ -2,13 +2,12 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 // import { SalesWidget } from '@/components/general';
-import { MainAuthWidget, CustomPopupWidget, ToolTipWidget } from '@/components/shared/general';
+import { MainAuthWidget, CustomPopupWidget, ToolTipWidget, GreetingWidget } from '@/components/shared/general';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Image from 'next/image';
 import { DSalesIcon, DdebtsIcon, DExpensesIcon, DStockIcon, SearchIcon, FilterIcon } from '@/components/shared/icons';
 
 
@@ -32,6 +31,8 @@ const Dashboard = () => {
     })
 
     const [isSaleChart, setIsSaleChart] = useState(false);
+    const [addItem, setAddItem] = useState(false);
+
 
 
 
@@ -51,10 +52,8 @@ const Dashboard = () => {
         <MainAuthWidget>
             <div className="px-5 mt-[70px] lg:mt-[80px]">
                 <div className="flex justify-between items-center pt-2 pb-4">
-                    <h1 className="text-lg sm:text-2xl md:text-3xl flex items-center font-semibold dark:text-zinc-200">Good morning Mark!
-
-                        <Image src="/images/morning-love.png" alt='Morning Greetings love image' style={{ width: "auto", height: "auto" }} width={50} height={50} priority />
-
+                    <h1 className="text-base sm:text-xl md:text-2xl flex items-center font-semibold dark:text-zinc-200">
+                        <GreetingWidget />
                     </h1>
                 </div>
 
@@ -78,11 +77,22 @@ const Dashboard = () => {
                     >
                         <SwiperSlide className=" h-[200px] text-white rounded-xl">
                             <div className='p-3 shadow-md shadow-indigo-400/20 bg-indigo-400 dark:bg-indigo-400/80  h-[inherit] rounded-xl'>
-                                <div className='flex justify-between items-center'>
+                                <div className='flex justify-between items-start'>
                                     <div>
                                         <h2 className='text-base lg:text-xl text-indigo-800 font-semibold'>Total Items</h2>
                                         <h1 className='text-xl lg:text-3xl font-semibold'>0</h1>
                                     </div>
+
+
+
+
+
+                                    <ToolTipWidget text={`New Item`} bg="indigo-600" >
+                                        <button onClick={() => setAddItem(true)} className='size-10 flex justify-center items-center bg-white rounded-xl'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                                                className="size-6 stroke-indigo-600"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>
+                                        </button>
+                                    </ToolTipWidget>
 
                                 </div>
                                 <div className='bg-indigo-600 h-full mt-4 relative rounded-tl-2xl rounded-tr-2xl flex items-center justify-between'>
@@ -186,6 +196,24 @@ const Dashboard = () => {
 
                     </Swiper>
 
+
+                    <CustomPopupWidget isOpen={addItem} onClose={() => setAddItem(false)} motionType="scale"
+                        confirmOnClose
+                        confirmMessage="Do you want to close?">
+                        <div className='flex flex-col md:flex-row items-center rounded-xl justify-center gap-y-4 gap-x-2 w-full  px-4'>
+                            <div className='p-2 w-full'>
+                                <div className='flex'>
+                                    <h1 className='text-2xl font-semibold'>Total Sales</h1>
+                                </div>
+
+                                {/* <SalesWidget /> */}
+
+                            </div>
+
+
+                        </div>
+
+                    </CustomPopupWidget>
 
                     <CustomPopupWidget isOpen={isSaleChart} onClose={() => setIsSaleChart(false)} motionType="scale"
                         confirmOnClose

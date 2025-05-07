@@ -35,15 +35,15 @@ const About = () => {
                         </div>
 
                         <div className='h-screen about-hero-bg bg-cover bg-no-repeat bg-center relative flex justify-center '>
-                            <div className='absolute top-4 left-5  lg:top-40 lg:left-20 size-48  rounded-2xl overflow-hidden'>
+                            <div className='absolute top-4 left-5  lg:top-40 lg:left-20 size-32 md:size-48  rounded-2xl overflow-hidden'>
                                 <Image src="/images/a-lady-desiging.webp" className='size-[inherit] object-cover' width={200} height={200} alt='A Lady Designing' priority />
                             </div>
 
-                            <div className='absolute top-4 right-5  lg:-top-20 lg:right-20 size-48 lg:size-[300px]  rounded-2xl overflow-hidden'>
+                            <div className='absolute top-4 right-5  lg:-top-20 lg:right-20 size-40 md:size-48 lg:size-[300px]  rounded-2xl overflow-hidden'>
                                 <Image src="/images/two-ladies-smiling.webp" className='size-[inherit] object-cover' width={200} height={200} alt='A Lady Designing' priority />
                             </div>
 
-                            <div className='absolute top-[300px] right-5  lg:-top-40 lg:left-20 size-48 lg:size-[250px]  rounded-2xl overflow-hidden'>
+                            <div className='absolute top-[300px] right-5  lg:-top-40 lg:left-20 size-32 md:size-48 lg:size-[250px]  rounded-2xl overflow-hidden'>
                                 <Image src="/images/smiling-man.webp" className='size-[inherit] object-cover' width={200} height={200} alt='A Lady Designing' priority />
                             </div>
 
@@ -51,12 +51,11 @@ const About = () => {
                                 <Image src="/images/two-people-on-a-laptop.webp" className='size-[inherit] object-cover' width={200} height={200} alt='A Lady Designing' priority />
                             </div>
 
-                            <div className='absolute bottom-[250px] left-5  lg:bottom-20 lg:left-[600px] size-40 lg:size-[300px]  rounded-2xl overflow-hidden'>
+                            <div className='absolute bottom-[250px] left-5  lg:bottom-20 lg:left-[600px] size-32 md:size-40 lg:size-[300px]  rounded-2xl overflow-hidden'>
                                 <Image src="/images/smiling-business-mother.webp" className='size-[inherit] object-cover' width={200} height={200} alt='A Lady Designing' priority />
                             </div>
 
-
-                            <div className='absolute bottom-[5rem] right-5  lg:bottom-40 lg:right-20 size-40  rounded-2xl overflow-hidden'>
+                            <div className='absolute bottom-[5rem] right-5  lg:bottom-40 lg:right-20 size-32 md:size-40  rounded-2xl overflow-hidden'>
                                 <Image src="/images/business-woman.webp" className='size-[inherit] object-cover' width={200} height={200} alt='A Lady Designing' priority />
                             </div>
 

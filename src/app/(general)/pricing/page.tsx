@@ -44,7 +44,8 @@ const Pricing = () => {
                             </div>
                             <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
                                 {/* Section Start */}
-                                <section className="flex flex-col rounded-3xl px-6 sm:px-8 lg:py-8 shadow-sm shadow-blue-400/50">
+                                <section className="flex flex-col rounded-3xl px-6 sm:px-8 shadow-sm shadow-blue-400/50 py-8 lg:order-none">
+
                                     <h3 className="mt-5 font-display text-lg text-slate-900">Starter</h3>
                                     <p className="mt-2 text-base text-slate-600">
                                         Good for anyone who is self-employed and just getting started.
@@ -177,7 +178,7 @@ const Pricing = () => {
                                 {/* Section End */}
 
                                 {/* Section Start */}
-                                <section className="flex flex-col rounded-3xl px-6 sm:px-8 order-first bg-gradient-to-tr from-blue-600 to-akauntme-2 py-8 lg:order-none">
+                                <section className="flex flex-col rounded-3xl px-6 sm:px-8 bg-gradient-to-tr from-blue-600 to-akauntme-2 py-8 lg:order-none">
                                     <h3 className="mt-5 font-display text-lg text-white">Small business</h3>
                                     <p className="mt-2 text-base text-white">
                                         Perfect for small / medium sized businesses.
@@ -349,7 +350,8 @@ const Pricing = () => {
                                 {/* Section End */}
 
                                 {/* Section Start */}
-                                <section className="flex flex-col rounded-3xl px-6 sm:px-8 lg:py-8 shadow-sm shadow-blue-400/50">
+                                <section className="flex flex-col rounded-3xl px-6 sm:px-8 shadow-sm shadow-blue-400/50 py-8 lg:order-none">
+
                                     <h3 className="mt-5 font-display text-lg text-slate-900">Enterprise</h3>
                                     <p className="mt-2 text-base text-slate-600">
                                         For even the bigger enterprise companies.

@@ -47,7 +47,7 @@ const ToolTipWidget: React.FC<TooltipProps> = ({
 
             {isVisible && text ? (
                 <div
-                    className={`${positionClasses} rounded-md z-[2000] absolute font-semibold -bottom-11 transform -translate-x-1/2 mb-2 w-max px-2 py-1.5 ${bg ? 'bg-' + bg : 'bg-gray-900'
+                    className={`${positionClasses} rounded-md z-[10000] absolute font-semibold -bottom-11 transform -translate-x-1/2 mb-2 w-max px-2 py-1.5 ${bg ? 'bg-' + bg : 'bg-gray-900'
                         }  text-xs rounded-lg shadow-lg ${textColor ? 'text-' + textColor : 'text-white'}`}>
                     {text}
                 </div>

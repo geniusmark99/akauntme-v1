@@ -84,13 +84,13 @@ const HeaderWidget = () => {
 
                         <div className='hidden md:flex bg-white rounded-full items-center py-2 px-4 border border-akauntme-deep/50 shadow-md'>
                             <ul className='flex justify-between items-center'>
-                                <li>
+                                {/* <li>
                                     <Link href="/platform"
                                         className={`${url === '/platform' ? 'bg-akauntme-deep/10' : ''} text-akauntme-deep rounded-full py-1.5 px-4 hover:bg-akauntme-deep/10`}
                                     >
                                         Platform
                                     </Link>
-                                </li>
+                                </li> */}
 
                                 <li>
                                     <Link href="/learn"
@@ -171,7 +171,7 @@ const HeaderWidget = () => {
                 <div className='shadow-md rounded-lg mx-6 shadow-akauntme-deep/30 my-5'>
                     <div className='py-2 px-2 mx-4'>
                         <ul className='w-full flex flex-col gap-y-3'>
-                            <li className='py-2'>
+                            {/* <li className='py-2'>
                                 <Link href="/platform" className='relative before:w-full before:h-[0.15px] before:-bottom-2 before:absolute before:content-[""] before:bg-gray-200 flex flex-col items-start  gap-y-3 py-2 mx-2'>
                                     <div className='flex justify-between items-center gap-y-3 w-full'>
                                         <h1 className='semibold'>
@@ -189,7 +189,7 @@ const HeaderWidget = () => {
                                     </div>
 
                                 </Link>
-                            </li>
+                            </li> */}
 
                             <li className='py-2'>
                                 <Link href="/learn" className='relative before:w-full before:h-[0.15px] before:-bottom-2 before:absolute before:content-[""] before:bg-gray-200 flex flex-col items-start  gap-y-3 py-2 mx-2'>
