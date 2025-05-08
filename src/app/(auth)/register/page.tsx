@@ -1,29 +1,80 @@
 'use client'
 import React from 'react'
-import { LogoIcon } from '@/components/shared/icons';
 import Link from 'next/link';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { LogoIcon, OverwhelmingIcon, BusinessFinanceIcon } from '@/components/shared/icons';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 const Register = () => {
     return (
         <div className='h-auto overflow-y-auto overflow-x-hidden lg:overflow-hidden lg:h-[100dvh]'>
             <div className='flex flex-col lg:flex-row-reverse w-full '>
-                <div className='hidden lg:flex flex-col w-full lg:w-6/12  bg-white rounded-2xl justify-center items-center'>
-                    <div className='mb-10'>
-                        <div className='flex items-end gap-x-2  justify-center text-center'>
-                            <LogoIcon type='alone' className='fill-indigo-500 size-10' />
-                            <h1 className='text-indigo-500 text-2xl font-semibold'>Akauntme</h1>
-                        </div>
-                        <p className='text-indigo-500 italic text-sm text-center indent-6'>Your smart accounting buddy...</p>
+                <div className='hidden lg:flex w-full lg:w-6/12'>
+                    <div className='bg-white h-screen py-10'>
+                        <div className="flex justify-center items-center text-gray-800 py-10">
+                            <Swiper
+                                loop={true}
+                                autoplay={{
+                                    delay: 8000,
+                                    disableOnInteraction: false,
+                                }}
+                                pagination={{
+                                    clickable: true,
+                                    bulletClass: 'swiper-pagination-bullet',
+                                    bulletActiveClass: 'swiper-pagination-bullet-active'
+                                }}
+                                navigation={false}
+                                modules={[Autoplay, Pagination, Navigation]}
+                            >
 
-                    </div>
+                                <SwiperSlide>
+                                    <div className='text-center h-[80vh]'>
 
-                    <div className='h-[500px] w-[300px] flex justify-center items-center bg-white border shadow-md rounded-2xl'>
-                        <div className='h-[460px] w-[290px] bg-white border shadow-md mx-4 my-4 rounded-2xl'>
+                                        <h2 className='text-2xl font-semibold'>Get Akauntme for Business Use:</h2>
+                                        <div className='flex justify-center mt-10'>
+
+                                            <p className='font-[400] lg:text-xl max-w-[600px] text-center leading-7'>
+                                                Elevate your business to new heights with Akauntme! By getting all your Bookkeeping workload
+                                                From sales tracking to expense management.
+                                            </p>
+                                        </div>
+                                        <div className='flex justify-center items-center'>
+
+                                            <OverwhelmingIcon />
+                                        </div>
+
+                                    </div>
+
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className='text-center h-[80vh]'>
+
+                                        <h2 className='text-2xl font-semibold'>Get Akauntme Business package:</h2>
+                                        <div className='flex justify-center mt-10'>
+
+                                            <p className='font-[400] lg:text-xl max-w-[600px] text-center leading-7'>
+                                                Whether you&apos;re running a business or planning your next big adventure, Akauntme is your ultimate accountability partner.
+                                            </p>
+                                        </div>
+
+                                        <div className='flex justify-center items-center'>
+
+                                            <BusinessFinanceIcon />
+                                        </div>
+
+                                    </div>
+
+                                </SwiperSlide>
+                            </Swiper>
+
 
                         </div>
                     </div>
                 </div>
-                <div className='w-full lg:w-6/12 flex flex-col overflow-hidden relative  justify-center items-center bg-gradient-to-r from-indigo-600 via-akauntme to-blue-600 lg:p-10'>
+                <div className='w-full lg:w-6/12 flex flex-col overflow-hidden relative  justify-center items-center bg-gradient-to-b from-akauntme to-blue-400 lg:p-10'>
                     <div className='md:hidden flex my-5 flex-col'>
                         <h1 className='text-2xl font-semibold text-white   items-end flex gap-x-2'>
                             <LogoIcon type='alone' className='size-10 fill-white' />

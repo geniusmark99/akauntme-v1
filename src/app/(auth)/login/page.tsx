@@ -2,7 +2,6 @@
 import { Input, InputError, AuthCard, CheckBox } from '@/components/shared/auth';
 import { LogoIcon, OverwhelmingIcon, BusinessFinanceIcon } from '@/components/shared/icons';
 import Link from 'next/link';
-import { useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -13,10 +12,10 @@ import { DraggableBackWidget } from '@/components/shared/general';
 
 const Login = () => {
 
-    useEffect(() => {
-        document.body.classList.remove("overflow-y-auto");
-        document.body.classList.add("overflow-hidden");
-    }, []);
+    // useEffect(() => {
+    //     document.body.classList.remove("overflow-y-auto");
+    //     document.body.classList.add("overflow-hidden");
+    // }, []);
     return (
         <>
             <AuthCard
