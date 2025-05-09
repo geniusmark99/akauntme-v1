@@ -8,11 +8,13 @@ import ToolTipWidget from "./ToolTipWidget";
 import CustomPopupWidget from "./CustomPopupWidget";
 import DraggableBackWidget from "./DraggableBackWidget";
 import GreetingWidget from "./GreetingWidget";
+import LoaderWidget from "./LoaderWidget";
 
 export {
     HeaderWidget, FooterWidget,
     HomeSliderWidget, MainAuthWidget,
     DarkModeWidget, GeneralSearchWidget,
     ToolTipWidget, CustomPopupWidget,
-    DraggableBackWidget, GreetingWidget
+    DraggableBackWidget, GreetingWidget,
+    LoaderWidget
 }

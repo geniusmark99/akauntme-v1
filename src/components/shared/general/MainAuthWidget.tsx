@@ -7,23 +7,27 @@ import { usePathname } from "next/navigation";
 import DarkModeWidget from "./DarkModeWidget";
 import GeneralSearchWidget from "./GeneralSearchWidget";
 import ToolTipWidget from "./ToolTipWidget";
+import { UserType } from "@/types/User";
+import { useAuth } from '@/hooks/auth'
+
 
 
 interface MainAuthProps {
     children: ReactNode;
     className?: string;
+    user: UserType
 }
 
 
-const MainAuthWidget: React.FC<MainAuthProps> = ({ children, className }) => {
+const MainAuthWidget: React.FC<MainAuthProps> = ({ children, className, user }) => {
 
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
-    // const [isAiVisible, setIsAiVisible] = useState(false);
+    const { logout } = useAuth({})
+
     const [isProfile, setIsProfile] = useState(false);
     const [isNotification, setIsNotification] = useState(false);
     const modalRef = useRef<HTMLDivElement>(null)
-    // const notifyRef = useRef<HTMLDivElement>(null)
 
 
     useEffect(() => {
@@ -89,10 +93,10 @@ const MainAuthWidget: React.FC<MainAuthProps> = ({ children, className }) => {
             title: 'Stocks'
         },
         {
-            id: 5, name: "Marketplace",
+            id: 5, name: "MarketMe",
             icon: <MarketplaceIcon type="filled" className='size-5 fill-current' />,
-            link: '/marketplace',
-            title: 'Marketplace'
+            link: '/marketme',
+            title: 'MarketMe'
         },
 
 
@@ -341,7 +345,7 @@ const MainAuthWidget: React.FC<MainAuthProps> = ({ children, className }) => {
                                         >
                                             <div className="py-2 text-sm text-gray-700 dark:text-zinc-100 space-y-2">
 
-
+                                                {user?.name}
                                                 <a href="#" className="block px-4 py-2 mx-2 rounded-lg hover:bg-gray-100 dark:hover:bg-zinc-700">
                                                     <div className="flex items-center gap-x-2">
 
@@ -373,15 +377,15 @@ const MainAuthWidget: React.FC<MainAuthProps> = ({ children, className }) => {
 
                                                 </a>
 
-                                                <a href="#" className="block px-4 py-2 mx-2 rounded-lg hover:bg-gray-100 dark:hover:bg-zinc-700">
-                                                    <div className="flex items-center gap-x-2">
+                                                <div className="block px-4 py-2 mx-2 rounded-lg hover:bg-gray-100 dark:hover:bg-zinc-700">
+                                                    <button onClick={logout} className="flex items-center gap-x-2">
                                                         <svg className="size-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" >
                                                             <path d="M11.5 6C8.4802259 6 6 8.4802259 6 11.5L6 36.5C6 39.519774 8.4802259 42 11.5 42L29.5 42C32.519774 42 35 39.519774 35 36.5 A 1.50015 1.50015 0 1 0 32 36.5C32 37.898226 30.898226 39 29.5 39L11.5 39C10.101774 39 9 37.898226 9 36.5L9 11.5C9 10.101774 10.101774 9 11.5 9L29.5 9C30.898226 9 32 10.101774 32 11.5 A 1.50015 1.50015 0 1 0 35 11.5C35 8.4802259 32.519774 6 29.5 6L11.5 6 z M 33.484375 15.484375 A 1.50015 1.50015 0 0 0 32.439453 18.060547L36.878906 22.5L15.5 22.5 A 1.50015 1.50015 0 1 0 15.5 25.5L36.878906 25.5L32.439453 29.939453 A 1.50015 1.50015 0 1 0 34.560547 32.060547L41.560547 25.060547 A 1.50015 1.50015 0 0 0 41.560547 22.939453L34.560547 15.939453 A 1.50015 1.50015 0 0 0 33.484375 15.484375 z" />
                                                         </svg>
                                                         Sign out
-                                                    </div>
+                                                    </button>
 
-                                                </a>
+                                                </div>
 
                                                 <div className="border-t border-gray-200 dark:border-zinc-600 md:hidden">
                                                     <div className="mt-5 mx-10">

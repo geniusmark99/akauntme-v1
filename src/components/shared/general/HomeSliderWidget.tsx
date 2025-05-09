@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 
 const items = [
     {
-        id: 0, Title: 'Sales', TitleDesc: [
+        id: 0, Title: '', TitleDesc: [
             {
                 icon:
                     <svg xmlns="http://www.w3.org/2000/svg" className='size-8 fill-current' viewBox="0 0 48 48" >
@@ -35,62 +35,62 @@ const items = [
                 , content: "Sell smarter, not harder. Akauntme keeps your sales on point."
             },
         ], valueDesc: 'Sales', bg: 'from-purple-500 to-pink-500',
-        bgImg: '/images/tester.webp',
+        bgImg: '/images/akauntme-sales.jpg',
         bgImgMob: '/images/tester-mobile.webp',
     },
     {
-        id: 1, Title: 'Expenses', TitleDesc: [
+        id: 1, Title: '', TitleDesc: [
             { icon: "Icon", content: "Stay in charge of every naira spent — effortlessly." },
             { icon: "Icon2", content: "Smart expense tracking that helps your profits breathe." },
             { icon: "Icon3", content: "Your expenses deserve attention — Akauntme keeps them crystal clear." },
             { icon: "Icon4", content: "Spend wisely. Grow bravely. Akauntme is your guide." },
         ], valueDesc: 'Expenses', bg: 'from-violet-500 to-fuchsia-500 hover:from-fuchsia-500 to-violet-500',
-        bgImg: '/images/tester-2.webp',
+        bgImg: '/images/akauntme-expenses.jpg',
         bgImgMob: '/images/tester-mobile-2.webp',
 
     },
     {
-        id: 2, Title: 'Debts', TitleDesc: [
+        id: 2, Title: '', TitleDesc: [
             { icon: "Icon", content: "Never forget who owes you — Akauntme remembers for you." },
             { icon: "Icon2", content: "Turn debts into opportunities with smart tracking." },
             { icon: "Icon3", content: "Manage debts gracefully, collect payments easily." },
             { icon: "Icon4", content: "Akauntme: Where debts don’t drag your dreams down." },
         ], valueDesc: 'Debts', bg: 'from-sky-500 to-indigo-500',
-        bgImg: '/images/tester-3.webp',
+        bgImg: '/images/akauntme-debts.jpg',
         bgImgMob: '/images/tester-mobile-3.webp',
 
     },
     {
-        id: 3, Title: 'Inventories', TitleDesc: [
+        id: 3, Title: '', TitleDesc: [
             { icon: "Icon", content: "Inventory chaos? Calm it with Akauntme." },
             { icon: "Icon2", content: "Know what’s in stock, what’s out, and what’s flying off the shelf." },
             { icon: "Icon3", content: "Manage products with ease — no more guessing games." },
             { icon: "Icon4", content: "Inventory made effortless, so you can focus on growth." },
         ], valueDesc: 'Inventories', bg: 'from-cyan-500 to-blue-500',
-        bgImg: '/images/tester-4.webp',
+        bgImg: '/images/akauntme-inventories.jpg',
         bgImgMob: '/images/tester-mobile-4.webp',
 
     },
     {
-        id: 4, Title: 'Receipts', TitleDesc: [
+        id: 4, Title: '', TitleDesc: [
             { icon: "Icon", content: "Instant, beautiful receipts — just a tap away." },
             { icon: "Icon2", content: "Proof of business, styled by Akauntme." },
             { icon: "Icon3", content: "Create, send, and store receipts without the paperwork mess." },
             { icon: "Icon4", content: "Secure your sales with sleek digital receipts." },
         ], valueDesc: 'Receipts', bg: 'from-amber-500 to-yellow-500',
-        bgImg: '/images/tester-5.webp',
+        bgImg: '/images/akauntme-receipt.jpg',
         bgImgMob: '/images/tester-mobile-5.webp',
 
 
     },
     {
-        id: 5, Title: 'Payment', TitleDesc: [
+        id: 5, Title: '', TitleDesc: [
             { icon: "Icon", content: "Payments, wallets, and more — FinTech power built into your business." },
             { icon: "Icon2", content: "Akauntme bridges banking and bookkeeping effortlessly." },
             { icon: "Icon3", content: "Send, receive, and manage money — all inside Akauntme." },
             { icon: "Icon4", content: "Grow your wallet, grow your world — the future of business finance is here" },
         ], valueDesc: 'Payment', bg: 'from-rose-500 to-red-500',
-        bgImg: '/images/tester-2.webp',
+        bgImg: '/images/akauntme-payments.jpg',
         bgImgMob: '/images/tester-mobile-2.webp',
         comingSoon: true
 
@@ -98,13 +98,13 @@ const items = [
     },
 
     {
-        id: 7, Title: 'MarketMe', TitleDesc: [
+        id: 7, Title: '', TitleDesc: [
             { icon: "Icon", content: "Showcase your business to the world — MarketMe is your stage" },
             { icon: "Icon2", content: "Sales made simple — record, review, and rejoice with Akauntme" },
             { icon: "Icon3", content: "Never lose a transaction. Akauntme captures every moment you grow." },
             { icon: "Icon4", content: "Sell smarter, not harder. Akauntme keeps your sales on point." },
         ], valueDesc: 'MarketMe', bg: 'from-cyan-500 to-indigo-500',
-        bgImg: '/images/tester-4.webp',
+        bgImg: '/images/akauntme-marketme.jpg',
         bgImgMob: '/images/tester-mobile-4.webp',
         comingSoon: true
     },
@@ -171,7 +171,7 @@ const HomeSliderWidget = () => {
                         </div>
 
                         <div
-                            className={`h-[200px] bg-no-repeat bg-center bg-cover opacity-90 bg-gradient-to-r ${item.bg} scale-95 transition-all hover:scale-100 lg:h-[300px]  text-akauntme-2 flex items-center justify-center rounded-xl cursor-pointer`}
+                            className={`h-[200px] bg-no-repeat bg-center bg-contain opacity-90 bg-gradient-to-r ${item.bg} scale-95 transition-all hover:scale-100 lg:h-[300px]  text-akauntme-2 flex items-center justify-center rounded-xl cursor-pointer`}
                             onClick={() => handleSlideClick(swiperIndex, item.valueDesc)}
                             style={{ backgroundImage: `url(${item.bgImg})` }}
                         >

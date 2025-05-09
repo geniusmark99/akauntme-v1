@@ -1,23 +1,77 @@
 'use client'
-import { Input, InputError, AuthCard, CheckBox } from '@/components/shared/auth';
+import { AuthCard, } from '@/components/shared/auth';
 import { LogoIcon, OverwhelmingIcon, BusinessFinanceIcon } from '@/components/shared/icons';
 import Link from 'next/link';
+import * as Yup from 'yup'
+// import { useSearchParams } from 'next/navigation'
+import axios, { AxiosError } from 'axios'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import { DraggableBackWidget } from '@/components/shared/general';
+import { DraggableBackWidget, LoaderWidget } from '@/components/shared/general';
+import { useState } from 'react';
+import { ErrorMessage, Field, Form, Formik, FormikHelpers } from 'formik'
+import { useAuth } from '@/hooks/auth'
+
+
+
+interface Values {
+    email: string
+    password: string
+    remember: boolean
+}
 
 
 const Login = () => {
 
+
+    // const searchParams = useSearchParams()
+    // const [status, setStatus] = useState<string>('');
+    const [isLoading, setIsLoading] = useState(false);
+
+    const { login } = useAuth({
+        middleware: 'guest',
+        redirectIfAuthenticated: '/dashboard',
+    })
+
     // useEffect(() => {
-    //     document.body.classList.remove("overflow-y-auto");
-    //     document.body.classList.add("overflow-hidden");
-    // }, []);
+    //     const resetToken = searchParams.get('reset')
+    //     setStatus(resetToken ? atob(resetToken) : '')
+    // }, [searchParams])
+
+    const submitForm = async (
+        values: Values,
+        { setSubmitting, setErrors }: FormikHelpers<Values>,
+    ): Promise<any> => {
+        setIsLoading(true);
+        try {
+            await login(values)
+        } catch (error: Error | AxiosError | any) {
+            if (axios.isAxiosError(error) && error.response?.status === 422) {
+                setErrors(error.response?.data?.errors)
+            }
+        } finally {
+            setSubmitting(false);
+            setIsLoading(false);
+            // setStatus('');
+
+        }
+    }
+
+    const LoginSchema = Yup.object().shape({
+        email: Yup.string()
+            .email('Invalid email')
+            .required('The email field is required.'),
+        password: Yup.string().required('The password field is required.'),
+    })
+
+
+
     return (
         <>
+
             <AuthCard
                 LeftPane={
                     <div className='flex justify-center flex-col items-center gap-y-10  py-5 md:py-10 lg:py-20 '>
@@ -55,48 +109,62 @@ const Login = () => {
 
                         </div>
 
-                        <form className='w-full justify-center flex flex-col items-center gap-y-5'>
-                            <div className='w-full flex justify-center'>
-                                <Input id="email" type="email"
-                                    className='py-3 rounded-lg w-9/12 md:w-6/12'
+                        <Formik
+                            onSubmit={submitForm}
+                            validationSchema={LoginSchema}
+                            initialValues={{ email: '', password: '', remember: false }}>
 
-                                    placeholder="Enter your email address" />
-                                <InputError className="mt-2" />
-                            </div>
 
-                            <div className='w-full flex justify-center'>
-                                <Input id="password" type="password"
+                            <Form className='w-full justify-center flex flex-col items-center gap-y-5 '>
 
-                                    className='py-3 rounded-lg w-9/12 md:w-6/12'
-                                    placeholder="Enter your password" />
-                                <InputError className="mt-2" />
-
-                            </div>
-
-                            <div className="flex justify-between w-9/12 md:w-6/12 items-center">
-                                <div className="flex items-center gap-x-2 text-indigo-600 font-semibold">
-                                    {/* <Input type="checkbox" className=""
-                                        name="remember"
-                                        id="remember_me"
-                                        onChange={event =>
-                                            setShouldRemember(event.target.checked)
-                                        }
-                                    /> 
-                                    Remember me
-
-                                    */}
-
-                                    <label className="flex items-center">
-                                        <CheckBox
-                                            name="remember"
-
+                                <div className='w-full flex justify-center items-center'>
+                                    <div className='w-full flex justify-center gap-y-2 items-center flex-col'>
+                                        <Field id="email" type="email"
+                                            name="email"
+                                            className='py-3 rounded-lg w-9/12 md:w-6/12 border-none outline-0 shadow px-2'
+                                            placeholder="Enter your email address" />
+                                        <ErrorMessage
+                                            name="email"
+                                            component="div"
+                                            className="text-xs text-red-500 flex w-9/12 md:w-6/12"
                                         />
-                                        <span className="ms-2 text-sm text-gray-600 dark:text-gray-400">Remember me</span>
-                                    </label>
+
+                                    </div>
+
                                 </div>
 
-                                {/* {canResetPassword && (
-                                    // href={route('password.request')}
+                                <div className='w-full flex justify-center items-center'>
+                                    <div className='w-full flex justify-center gap-y-2 items-center flex-col'>
+                                        <Field id="password"
+                                            name="password"
+                                            type="password"
+                                            className='py-3 rounded-lg w-9/12 md:w-6/12 border-none outline-0 shadow px-2'
+                                            placeholder="Enter your password" />
+                                        <ErrorMessage
+                                            name="password"
+                                            component="div"
+                                            className="text-xs text-red-500 flex w-9/12 md:w-6/12"
+                                        />
+
+                                    </div>
+
+                                </div>
+
+                                <div className="flex justify-between w-9/12 md:w-6/12 items-center">
+
+
+                                    <label htmlFor="remember" className="inline-flex items-center">
+                                        <Field
+                                            type="checkbox"
+                                            name="remember"
+                                            className="rounded cursor-pointer border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 "
+                                        />
+
+                                        <span className="ms-2 text-sm text-gray-600 dark:text-gray-400">Remember me</span>
+
+
+                                    </label>
+
 
                                     <Link
                                         href="#"
@@ -104,18 +172,23 @@ const Login = () => {
                                         Forget password?
                                     </Link>
 
-                                )} */}
 
-                            </div>
+                                </div>
 
-                            <Link href="/dashboard" className="flex justify-center bg-gradient-to-tr from-akauntme to-blue-400 font-semibold lg:text-xl py-3 rounded-lg shadow-lg shadow-akauntme/70 transition-all hover:scale-95 w-9/12 md:w-6/12 text-center text-white">
-                                Sign In
-                            </Link>
+                                <button disabled={isLoading} type='submit' className="flex justify-center bg-gradient-to-tr from-akauntme to-blue-400 font-semibold lg:text-xl py-3 rounded-lg shadow-lg shadow-akauntme/70 transition-all hover:scale-95 w-9/12 md:w-6/12 text-center text-white">
+                                    {isLoading ? (
+                                        <LoaderWidget />
+                                    ) : (
+                                        'Sign In'
+                                    )}
+                                </button>
 
-                            <div>
-                                Don&apos;t have an account? <Link href="/register" className="text-akauntme hover:underline cursor-pointer">Sign Up</Link>
-                            </div>
-                        </form>
+                                <div>
+                                    Don&apos;t have an account? <Link href="/register" className="text-akauntme hover:underline cursor-pointer">Sign Up</Link>
+                                </div>
+                            </Form>
+
+                        </Formik>
 
 
 
@@ -126,8 +199,6 @@ const Login = () => {
                     <div className='bg-gradient-to-b from-akauntme to-blue-400 h-screen py-10'>
                         <div className="flex justify-center items-center text-white py-10">
                             <Swiper
-                                // spaceBetween={30}
-                                // centeredSlides={true}
                                 loop={true}
                                 autoplay={{
                                     delay: 8000,
@@ -188,8 +259,9 @@ const Login = () => {
                 }
 
             />
-
             <DraggableBackWidget />
+
+
 
         </>
     );
