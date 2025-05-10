@@ -67,7 +67,7 @@ export const useAuth = ({
     }): Promise<AxiosResponse> => {
         try {
             await csrf()
-            return await axios.post('/forgot-password', data)
+            return await axios.post('/api/forgot-password', data)
         } catch (error) {
             throw error
         }
@@ -81,7 +81,7 @@ export const useAuth = ({
         try {
             await csrf()
 
-            const response = await axios.post('/reset-password', {
+            const response = await axios.post('/api/reset-password', {
                 ...data,
                 token: params.token,
             })
@@ -94,7 +94,7 @@ export const useAuth = ({
 
     const resendEmailVerification = async () => {
         try {
-            return await axios.post('/email/verification-notification')
+            return await axios.post('/api/email/verification-notification')
         } catch (error) {
             throw error
         }
@@ -114,7 +114,7 @@ export const useAuth = ({
         }
 
         if (
-            window.location.pathname === '/verify-email' &&
+            window.location.pathname === '/api/verify-email' &&
             user?.email_verified_at &&
             redirectIfAuthenticated
         ) {

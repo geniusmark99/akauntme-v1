@@ -3,7 +3,6 @@ import { AuthCard, } from '@/components/shared/auth';
 import { LogoIcon, OverwhelmingIcon, BusinessFinanceIcon } from '@/components/shared/icons';
 import Link from 'next/link';
 import * as Yup from 'yup'
-// import { useSearchParams } from 'next/navigation'
 import axios, { AxiosError } from 'axios'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -167,7 +166,7 @@ const Login = () => {
 
 
                                     <Link
-                                        href="#"
+                                        href="/forget-password"
                                         className="text-akauntme hover:underline">
                                         Forget password?
                                     </Link>
@@ -177,7 +176,7 @@ const Login = () => {
 
                                 <button disabled={isLoading} type='submit' className="flex justify-center bg-gradient-to-tr from-akauntme to-blue-400 font-semibold lg:text-xl py-3 rounded-lg shadow-lg shadow-akauntme/70 transition-all hover:scale-95 w-9/12 md:w-6/12 text-center text-white">
                                     {isLoading ? (
-                                        <LoaderWidget />
+                                        <LoaderWidget className='text-akauntme' />
                                     ) : (
                                         'Sign In'
                                     )}

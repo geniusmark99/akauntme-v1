@@ -6,9 +6,10 @@ import { ArrowLeft } from 'lucide-react';
 
 type DraggableBackButtonProps = {
     classNameProps?: string;
+    iconColor?: string;
 };
 
-const DraggableBackWidget: React.FC<DraggableBackButtonProps> = ({ classNameProps = '' }) => {
+const DraggableBackWidget: React.FC<DraggableBackButtonProps> = ({ classNameProps = '', iconColor }) => {
     const router = useRouter();
 
     return (
@@ -24,7 +25,7 @@ const DraggableBackWidget: React.FC<DraggableBackButtonProps> = ({ classNameProp
                 className={`group-hover:-translate-x-2 group-hover:scale-100  ${classNameProps} transition-all scale-95 w-14 h-14 rounded-full  bg-white text-akauntme flex items-center justify-center shadow-lg`}
                 aria-label="Go Back"
             >
-                <ArrowLeft className='stroke-black' />
+                <ArrowLeft className={`${iconColor ? iconColor : 'stroke-black'}`} />
             </button>
 
 

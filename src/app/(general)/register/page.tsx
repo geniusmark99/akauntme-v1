@@ -238,7 +238,7 @@ const Register = () => {
                                         <button type='submit' disabled={isLoading}
                                             className="w-full mt-3 max-w-sm lg:min-w-[300px] py-3 px-10 rounded-xl text-center flex justify-center items-center font-semibold backdrop-blur-md bg-white/10 border border-white/20 text-white  shadow-lg hover:bg-white/20 transition duration-300">
                                             {isLoading ? (
-                                                <LoaderWidget />
+                                                <LoaderWidget className='text-akauntme' />
                                             ) : (
                                                 'Sign In'
                                             )}

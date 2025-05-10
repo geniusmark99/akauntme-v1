@@ -1,11 +1,16 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import LoaderWidget from './LoaderWidget';
 
 type GreetingData = {
     message: string;
-    icon: React.ReactElement
+    icon: React.ReactElement;
 };
+
+interface GreetingProps {
+    user?: string;
+}
 
 const getGreeting = (): GreetingData => {
     const hour = new Date().getHours();
@@ -53,7 +58,7 @@ const getGreeting = (): GreetingData => {
     }
 };
 
-const GreetingWidget = () => {
+const GreetingWidget: React.FC<GreetingProps> = ({ user }) => {
     const [greeting, setGreeting] = useState<GreetingData>(getGreeting());
 
     useEffect(() => {
@@ -64,10 +69,9 @@ const GreetingWidget = () => {
     }, []);
 
     return (
-        <div className="flex items-center justify-center gap-x-1">
+        <div className="flex items-center justify-center gap-x-2">
             <div className="size-6">{greeting.icon}</div>
-            <span className="font-semibold">{greeting.message}</span>
-            Mark!
+            <span className="font-semibold">{greeting.message}</span>{user ? `${user}` : <LoaderWidget className='text-akauntme mt-2' />}
         </div>
     );
 };
