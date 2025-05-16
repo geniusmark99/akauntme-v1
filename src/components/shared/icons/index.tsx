@@ -30,6 +30,7 @@ import DdebtsIcon from "./DdebtsIcon";
 import DExpensesIcon from "./DExpensesIcon";
 import DSalesIcon from "./DSalesIcon";
 import DStockIcon from "./DStockIcon";
+import EmptyStateIcon from "./EmptyStateIcon";
 
 export {
     HamburgerIcon, SearchIcon, ProfileIcon, LogoIcon,
@@ -39,5 +40,5 @@ export {
     BusinessFinanceIcon, PersonalFinanceIcon, ApplicationLogo, OverwhelmingIcon,
     ReceiptIcon, MarketplaceIcon, LogoutIcon, NotificationIcon,
     NoDataIcon, ActivitiesIcon, InvoiceIcon, DdebtsIcon,
-    DSalesIcon, DExpensesIcon, DStockIcon
+    DSalesIcon, DExpensesIcon, DStockIcon, EmptyStateIcon
 }

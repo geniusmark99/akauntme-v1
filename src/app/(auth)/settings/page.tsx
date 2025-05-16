@@ -1,7 +1,14 @@
+'use client'
 import Link from 'next/link';
 import SettingsPopupWidgets from "./components/SettingsPopupWidgets";
+import { useAuth } from "@/hooks/auth";
+
 
 const Settings = () => {
+
+    const { user } = useAuth({ middleware: 'auth' });
+
+
     return <>
         <div>
             <div className='pt-1 lg:py-5'>
@@ -44,9 +51,9 @@ const Settings = () => {
                             </svg>
                         </div>
                         <div>
-                            <h1 className='text-xl md:text-2xl font-semibold text-white'>Mark Okechukwu</h1>
-                            <p className='text-gray-200'>markthavalor@gmail.com</p>
-                            <Link href="#" className='text-gray-100 underline hover:underline cursor-pointer'>See your store</Link>
+                            <h1 className='text-xl md:text-2xl font-semibold text-white'>{user?.name}</h1>
+                            <p className='text-gray-200'>{user?.email}</p>
+                            <Link href="/marketme" className='text-gray-100 underline hover:underline cursor-pointer'>See your store</Link>
                         </div>
                     </div>
                     <div className='grid grid-cols-2  mt-6 lg:mt-0 text-white gap-3 lg:gap-x-10 '>

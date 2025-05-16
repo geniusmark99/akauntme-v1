@@ -11,11 +11,11 @@ export const useProducts = () => {
         mutate: mutateProducts,
     } = useSWR('/api/v1/products', fetcher)
 
-    const {
-        data: lowStockProducts,
-        error: lowStockError,
-        mutate: mutateLowStock,
-    } = useSWR('/api/v1/products/low-stock', fetcher)
+    // const {
+    //     data: lowStockProducts,
+    //     error: lowStockError,
+    //     mutate: mutateLowStock,
+    // } = useSWR('/api/v1/products/low-stock', fetcher)
 
     const getProduct = async (id: number) => {
         try {
@@ -26,7 +26,7 @@ export const useProducts = () => {
         }
     }
 
-    const createProduct = async (data: any) => {
+    const createProduct = async (data: { name: string, category: string, description: string, price: string, stock: string }) => {
         try {
             await axios.post('/api/v1/products', data)
             mutateProducts()
@@ -35,7 +35,7 @@ export const useProducts = () => {
         }
     }
 
-    const updateProduct = async (id: number, data: any) => {
+    const updateProduct = async (id: number, data: { name: string, category: string, description: string, price: number, stock: number }) => {
         try {
             await axios.put(`/api/v1/products/${id}`, data)
             mutateProducts()
@@ -46,8 +46,8 @@ export const useProducts = () => {
 
     const deleteProduct = async (id: number) => {
         try {
-            await axios.delete(`/api/v1/products/${id}`)
-            mutateProducts()
+            await axios.delete(`/api/v1/products/${id}`);
+            mutateProducts();
         } catch (error) {
             throw error
         }
@@ -65,8 +65,8 @@ export const useProducts = () => {
     return {
         products,
         productsError,
-        lowStockProducts,
-        lowStockError,
+        // lowStockProducts,
+        // lowStockError,
         getProduct,
         createProduct,
         updateProduct,

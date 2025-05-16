@@ -84,13 +84,7 @@ const HeaderWidget = () => {
 
                         <div className='hidden md:flex bg-white rounded-full items-center py-2 px-4 border border-akauntme-deep/50 shadow-md'>
                             <ul className='flex justify-between items-center'>
-                                {/* <li>
-                                    <Link href="/platform"
-                                        className={`${url === '/platform' ? 'bg-akauntme-deep/10' : ''} text-akauntme-deep rounded-full py-1.5 px-4 hover:bg-akauntme-deep/10`}
-                                    >
-                                        Platform
-                                    </Link>
-                                </li> */}
+
 
                                 <li>
                                     <Link href="/learn"
@@ -113,6 +107,21 @@ const HeaderWidget = () => {
                                         className={`${url === '/contact-us' ? 'bg-akauntme-deep/10' : ''} text-akauntme-deep rounded-full py-1.5 px-4 hover:bg-akauntme-deep/10`}>
 
                                         Contact us
+                                    </Link>
+                                </li>
+
+
+                                <li>
+                                    <Link href="/blog"
+                                        className={`${url === '/blog' ? 'bg-akauntme-deep/10' : ''} text-akauntme-deep rounded-full py-1.5 px-4 hover:bg-akauntme-deep/10`}
+                                    >
+                                        Blog
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/our-community"
+                                        className={`${url === '/our-community' ? 'bg-akauntme-deep/10' : ''} text-akauntme-deep rounded-full py-1.5 px-4 hover:bg-akauntme-deep/10`}>
+                                        Our community
                                     </Link>
                                 </li>
                                 <li>
@@ -236,6 +245,28 @@ const HeaderWidget = () => {
 
 
                             <li className='py-2'>
+                                <Link href="/blog" className='relative before:w-full before:h-[0.15px] before:-bottom-2 before:absolute before:content-[""] before:bg-gray-200 flex flex-col items-start  gap-y-3 py-2 mx-2'>
+                                    <div className='flex justify-between items-center gap-y-3 w-full'>
+                                        <h1 className='semibold'>
+                                            Blog
+                                        </h1>
+
+                                        <div>
+                                            <svg className='size-6 stroke-gray-600' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18.71 12.23H5" stroke="black" strokeWidth="1.5"></path><path d="M11.8501 5.37012C13.3901 8.05012 18.7101 12.2301 18.7101 12.2301C18.7101 12.2301 13.3901 16.4101 11.8501 19.0901" stroke="black" strokeOpacity="0.99" strokeWidth="1.5"></path></svg>
+                                        </div>
+
+                                    </div>
+
+                                    <div className='text-xs text-gray-500'>
+                                        Get the latest updates from our blog
+                                    </div>
+
+                                </Link>
+                            </li>
+
+
+
+                            <li className='py-2'>
                                 <Link href="/contact-us" className='relative before:w-full before:h-[0.15px] before:-bottom-2 before:absolute before:content-[""] before:bg-gray-200 flex flex-col items-start  gap-y-3 py-2 mx-2'>
                                     <div className='flex justify-between items-center gap-y-3 w-full'>
                                         <h1 className='semibold'>
@@ -250,6 +281,27 @@ const HeaderWidget = () => {
 
                                     <div className='text-xs text-gray-500'>
                                         Have any complain or recommendation, we are all ears.
+                                    </div>
+
+                                </Link>
+                            </li>
+
+
+                            <li className='py-2'>
+                                <Link href="/our-community" className='relative before:w-full before:h-[0.15px] before:-bottom-2 before:absolute before:content-[""] before:bg-gray-200 flex flex-col items-start  gap-y-3 py-2 mx-2'>
+                                    <div className='flex justify-between items-center gap-y-3 w-full'>
+                                        <h1 className='semibold'>
+                                            Our community
+                                        </h1>
+
+                                        <div>
+                                            <svg className='size-6 stroke-gray-600' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18.71 12.23H5" stroke="black" strokeWidth="1.5"></path><path d="M11.8501 5.37012C13.3901 8.05012 18.7101 12.2301 18.7101 12.2301C18.7101 12.2301 13.3901 16.4101 11.8501 19.0901" stroke="black" strokeOpacity="0.99" strokeWidth="1.5"></path></svg>
+                                        </div>
+
+                                    </div>
+
+                                    <div className='text-xs text-gray-500'>
+                                        Join our community, to get the latest updates.
                                     </div>
 
                                 </Link>

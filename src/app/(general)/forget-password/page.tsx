@@ -109,7 +109,7 @@ const ForgetPassword = () => {
                                     <div className='w-full flex justify-center gap-y-2 items-center flex-col'>
                                         <Field id="email" type="email"
                                             name="email"
-                                            className='py-3 rounded-lg w-9/12 md:w-6/12 border-none outline-0 shadow px-2  bg-white'
+                                            className='py-3 rounded-lg w-9/12 md:w-6/12 border-none outline-0 shadow px-4  bg-white'
                                             placeholder="Enter your email address" />
                                         <ErrorMessage
                                             name="email"
@@ -124,16 +124,16 @@ const ForgetPassword = () => {
 
 
 
-                                <button disabled={isLoading} type='submit' className="flex justify-center cursor-pointer bg-gradient-to-tr from-rose-400 to-amber-400 font-semibold lg:text-xl py-3 rounded-lg shadow-lg shadow-rose-500/70 transition-all hover:scale-95 w-9/12 md:w-6/12 text-center text-white">
+                                <button disabled={isLoading} type='submit' className="flex justify-center cursor-pointer bg-gradient-to-tr from-rose-400 to-amber-400 font-semibold  lg:text-lg py-3 rounded-lg shadow-lg shadow-rose-500/70 transition-all hover:scale-95 w-9/12 md:w-6/12 text-center text-white">
                                     {isLoading ? (
                                         <LoaderWidget className='text-akauntme' />
                                     ) : (
-                                        'Sign In'
+                                        'Email Password Reset Link'
                                     )}
                                 </button>
 
-                                <div>
-                                    Just remembered your password? <Link href="/login" className="text-akauntme hover:underline cursor-pointer">Sign in</Link>
+                                <div className='text-sm sm:text-normal text-rose-500 flex gap-x-1'>
+                                    Just remembered your password? <Link href="/login" className="text-akauntme hover:underline cursor-pointer font-semibold">Sign in</Link>
                                 </div>
                             </Form>
 

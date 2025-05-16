@@ -10,6 +10,7 @@ import DraggableBackWidget from "./DraggableBackWidget";
 import GreetingWidget from "./GreetingWidget";
 import LoaderWidget from "./LoaderWidget";
 import ConfettiPopupWidget from "./ConfettiPopupWidget"
+import FireConfettiWidget from "./FireConfettiWidget"
 
 export {
     HeaderWidget, FooterWidget,
@@ -17,5 +18,6 @@ export {
     DarkModeWidget, GeneralSearchWidget,
     ToolTipWidget, CustomPopupWidget,
     DraggableBackWidget, GreetingWidget,
-    LoaderWidget, ConfettiPopupWidget
+    LoaderWidget, ConfettiPopupWidget,
+    FireConfettiWidget
 }

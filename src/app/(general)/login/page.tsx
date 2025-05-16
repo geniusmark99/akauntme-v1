@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { DraggableBackWidget, LoaderWidget } from '@/components/shared/general';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ErrorMessage, Field, Form, Formik, FormikHelpers } from 'formik'
 import { useAuth } from '@/hooks/auth'
 
@@ -29,6 +29,7 @@ const Login = () => {
     // const searchParams = useSearchParams()
     // const [status, setStatus] = useState<string>('');
     const [isLoading, setIsLoading] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
 
     const { login } = useAuth({
         middleware: 'guest',
@@ -39,6 +40,10 @@ const Login = () => {
     //     const resetToken = searchParams.get('reset')
     //     setStatus(resetToken ? atob(resetToken) : '')
     // }, [searchParams])
+
+    // useEffect(() => {
+    //     document.body.style.overflow = "hidden";
+    // });
 
     const submitForm = async (
         values: Values,
@@ -54,7 +59,6 @@ const Login = () => {
         } finally {
             setSubmitting(false);
             setIsLoading(false);
-            // setStatus('');
 
         }
     }
@@ -63,7 +67,8 @@ const Login = () => {
         email: Yup.string()
             .email('Invalid email')
             .required('The email field is required.'),
-        password: Yup.string().required('The password field is required.'),
+        password: Yup.string()
+            .required('The password field is required.'),
     })
 
 
@@ -112,8 +117,6 @@ const Login = () => {
                             onSubmit={submitForm}
                             validationSchema={LoginSchema}
                             initialValues={{ email: '', password: '', remember: false }}>
-
-
                             <Form className='w-full justify-center flex flex-col items-center gap-y-5 '>
 
                                 <div className='w-full flex justify-center items-center'>
@@ -133,12 +136,25 @@ const Login = () => {
                                 </div>
 
                                 <div className='w-full flex justify-center items-center'>
-                                    <div className='w-full flex justify-center gap-y-2 items-center flex-col'>
-                                        <Field id="password"
-                                            name="password"
-                                            type="password"
-                                            className='py-3 rounded-lg w-9/12 md:w-6/12 border-none outline-0 shadow px-2'
-                                            placeholder="Enter your password" />
+                                    <div className='w-full relative flex justify-center gap-y-2 items-center flex-col'>
+                                        <div className='w-9/12 md:w-6/12 relative'>
+
+                                            <Field id="password"
+                                                name="password"
+                                                type={showPassword ? 'text' : 'password'}
+                                                className='py-3 rounded-bl-lg rounded-tl-lg w-10/12  border-none outline-0 shadow px-2'
+                                                placeholder="Enter your password" />
+
+
+                                            <button
+                                                type='button'
+                                                className="absolute py-3  w-2/12 rounded-br-lg rounded-tr-lg text-white  px-2 bg-linear-120 from-cyan-500 to-blue-500 right-0  top-1/2 transform -translate-y-1/2 cursor-pointer"
+                                                onClick={() => setShowPassword(prev => !prev)}
+                                            >
+                                                {showPassword ? "hide" : "show"}
+                                            </button>
+                                        </div>
+
                                         <ErrorMessage
                                             name="password"
                                             component="div"
@@ -176,7 +192,7 @@ const Login = () => {
 
                                 <button disabled={isLoading} type='submit' className="flex justify-center bg-gradient-to-tr from-akauntme to-blue-400 font-semibold lg:text-xl py-3 rounded-lg shadow-lg shadow-akauntme/70 transition-all hover:scale-95 w-9/12 md:w-6/12 text-center text-white">
                                     {isLoading ? (
-                                        <LoaderWidget className='text-akauntme' />
+                                        <LoaderWidget className='text-white' />
                                     ) : (
                                         'Sign In'
                                     )}

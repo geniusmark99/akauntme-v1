@@ -36,7 +36,7 @@ const items = [
             },
         ], valueDesc: 'Sales', bg: 'from-purple-500 to-pink-500',
         bgImg: '/images/akauntme-sales.jpg',
-        bgImgMob: '/images/tester-mobile.webp',
+        bgImgMob: '/images/akauntme-sales.jpg',
     },
     {
         id: 1, Title: '', TitleDesc: [
@@ -46,7 +46,7 @@ const items = [
             { icon: "Icon4", content: "Spend wisely. Grow bravely. Akauntme is your guide." },
         ], valueDesc: 'Expenses', bg: 'from-violet-500 to-fuchsia-500 hover:from-fuchsia-500 to-violet-500',
         bgImg: '/images/akauntme-expenses.jpg',
-        bgImgMob: '/images/tester-mobile-2.webp',
+        bgImgMob: '/images/akauntme-expenses.jpg',
 
     },
     {
@@ -57,7 +57,7 @@ const items = [
             { icon: "Icon4", content: "Akauntme: Where debts don’t drag your dreams down." },
         ], valueDesc: 'Debts', bg: 'from-sky-500 to-indigo-500',
         bgImg: '/images/akauntme-debts.jpg',
-        bgImgMob: '/images/tester-mobile-3.webp',
+        bgImgMob: '/images/akauntme-debts.jpg',
 
     },
     {
@@ -68,7 +68,7 @@ const items = [
             { icon: "Icon4", content: "Inventory made effortless, so you can focus on growth." },
         ], valueDesc: 'Inventories', bg: 'from-cyan-500 to-blue-500',
         bgImg: '/images/akauntme-inventories.jpg',
-        bgImgMob: '/images/tester-mobile-4.webp',
+        bgImgMob: '/images/akauntme-inventories.jpg',
 
     },
     {
@@ -79,7 +79,7 @@ const items = [
             { icon: "Icon4", content: "Secure your sales with sleek digital receipts." },
         ], valueDesc: 'Receipts', bg: 'from-amber-500 to-yellow-500',
         bgImg: '/images/akauntme-receipt.jpg',
-        bgImgMob: '/images/tester-mobile-5.webp',
+        bgImgMob: '/images/akauntme-receipt.jpg',
 
 
     },
@@ -91,7 +91,7 @@ const items = [
             { icon: "Icon4", content: "Grow your wallet, grow your world — the future of business finance is here" },
         ], valueDesc: 'Payment', bg: 'from-rose-500 to-red-500',
         bgImg: '/images/akauntme-payments.jpg',
-        bgImgMob: '/images/tester-mobile-2.webp',
+        bgImgMob: '/images/akauntme-payments.jpg',
         comingSoon: true
 
 
@@ -105,7 +105,7 @@ const items = [
             { icon: "Icon4", content: "Sell smarter, not harder. Akauntme keeps your sales on point." },
         ], valueDesc: 'MarketMe', bg: 'from-cyan-500 to-indigo-500',
         bgImg: '/images/akauntme-marketme.jpg',
-        bgImgMob: '/images/tester-mobile-4.webp',
+        bgImgMob: '/images/akauntme-marketme.jpg',
         comingSoon: true
     },
 
@@ -229,7 +229,7 @@ const HomeSliderWidget = () => {
 
                                 </div>
                                 <div className='md:hidden w-full overflow-hidden'>
-                                    <div className='h-[200px] bg-center bg-cover bg-no-repeat' style={{ backgroundImage: `url(${items[index].bgImgMob})` }} draggable={false}></div>
+                                    <div className='h-[200px] bg-[100%_50%] bg-cover bg-no-repeat' style={{ backgroundImage: `url(${items[index].bgImgMob})` }} draggable={false}></div>
 
                                 </div>
                                 <div className='hidden md:block w-full md:w-6/12  md:h-[600px] bg-center bg-cover bg-no-repeat rounded-tr-2xl rounded-br-2xl' style={{ backgroundImage: `url(${items[index].bgImg})` }} draggable={false}>
