@@ -148,7 +148,7 @@ const Login = () => {
 
                                             <button
                                                 type='button'
-                                                className="absolute py-3  w-2/12 rounded-br-lg rounded-tr-lg text-white  px-2 bg-linear-120 from-cyan-500 to-blue-500 right-0  top-1/2 transform -translate-y-1/2 cursor-pointer"
+                                                className="absolute py-3 text-sm w-2/12 rounded-br-lg rounded-tr-lg text-white  px-2 bg-linear-120 from-cyan-500 to-blue-500 right-0  top-1/2 transform -translate-y-1/2 cursor-pointer"
                                                 onClick={() => setShowPassword(prev => !prev)}
                                             >
                                                 {showPassword ? "hide" : "show"}

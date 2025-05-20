@@ -390,7 +390,7 @@ const Pricing = () => {
                                      text-slate-800">
                                             &#8358;29,999
                                         </p>
-                                        <div className='rounded-full py-2 px-3 text-white text-sm bg-gradient-to-tr from-teal-500 to-blue-500 shadow-inner shadow-blue-400'>
+                                        <div className='rounded-full py-2 px-3 text-white text-xs sm:text-sm bg-gradient-to-tr from-teal-500 to-blue-500 shadow-inner shadow-blue-400'>
                                             Coming soon
                                         </div>
                                     </div>

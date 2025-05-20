@@ -256,7 +256,7 @@ const About = () => {
                                     <div className="mt-3 space-y-2 text-center">
                                         <div className="space-y-1 text-lg font-medium leading-6">
                                             <h3>Victoria Ambah</h3>
-                                            <p className="text-akauntme-deep">Head Marketing Directory</p>
+                                            <p className="text-akauntme-deep">Head Marketing Director</p>
                                         </div>
                                     </div>
                                 </div>
