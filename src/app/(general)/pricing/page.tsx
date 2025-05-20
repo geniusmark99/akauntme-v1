@@ -37,22 +37,27 @@ const Pricing = () => {
                                     </span>{" "}
                                     {/* */}for everyone.
                                 </h2>
-                                <p className="mt-4 text-lg text-center text-slate-500">
-                                    It doesn&apos;t matter what size your business is, our software would work
-                                    well for you.
-                                </p>
+                                <div className='flex justify-center mt-4'>
+
+                                    <p className="mt-4 text-lg md:max-w-[600px] text-center text-slate-500">
+                                        It doesn&apos;t matter what size your business is, <b className='text-akauntme'>Akauntme</b> cares about your business health and would work
+                                        well for you.
+                                    </p>
+                                </div>
+
                             </div>
                             <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3 xl:mx-0 xl:gap-x-8">
                                 {/* Section Start */}
                                 <section className="flex flex-col rounded-3xl px-6 sm:px-8 shadow-sm shadow-blue-400/50 py-8 lg:order-none">
 
-                                    <h3 className="mt-5 font-display text-lg text-slate-900">Starter</h3>
+                                    <h3 className="mt-5 font-display text-lg text-slate-900">Starter Plan – “Launch”</h3>
                                     <p className="mt-2 text-base text-slate-600">
-                                        Good for anyone who is self-employed and just getting started.
+                                        Perfect for solo entrepreneurs &amp; small businesses just getting started.
+
                                     </p>
                                     <p className="order-first font-display text-5xl font-light tracking-tight
                                      text-slate-800">
-                                        &#8358;1000 <span className='text-base'>per Month</span>
+                                        &#8358;4999 <span className='text-base'>per Month</span>
                                     </p>
                                     <ul
                                         role="list"
@@ -77,7 +82,7 @@ const Pricing = () => {
                                                     strokeLinejoin="round"
                                                 />
                                             </svg>
-                                            <span className="ml-4">Send 10 quotes and invoices</span>
+                                            <span className="ml-4">Add &amp; Manage Products/Inventory</span>
                                         </li>
                                         <li className="flex">
                                             <svg
@@ -98,7 +103,7 @@ const Pricing = () => {
                                                     strokeLinejoin="round"
                                                 />
                                             </svg>
-                                            <span className="ml-4">Connect up to 2 bank accounts</span>
+                                            <span className="ml-4">Simple Invoice Generation</span>
                                         </li>
                                         <li className="flex">
                                             <svg
@@ -119,7 +124,7 @@ const Pricing = () => {
                                                     strokeLinejoin="round"
                                                 />
                                             </svg>
-                                            <span className="ml-4">Track up to 15 expenses per month</span>
+                                            <span className="ml-4">Expense &amp; Income Tracker</span>
                                         </li>
                                         <li className="flex">
                                             <svg
@@ -161,7 +166,29 @@ const Pricing = () => {
                                                     strokeLinejoin="round"
                                                 />
                                             </svg>
-                                            <span className="ml-4">Export up to 3 reports</span>
+                                            <span className="ml-4">Basic Analytics (Daily & Weekly Summary)</span>
+                                        </li>
+
+                                        <li className="flex">
+                                            <svg
+                                                aria-hidden="true"
+                                                className="h-6 w-6 flex-none fill-current stroke-current text-slate-400"
+                                            >
+                                                <path
+                                                    d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
+                                                    strokeWidth={0}
+                                                />
+                                                <circle
+                                                    cx={12}
+                                                    cy={12}
+                                                    r="8.25"
+                                                    fill="none"
+                                                    strokeWidth="1.5"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                />
+                                            </svg>
+                                            <span className="ml-4">1 User Account</span>
                                         </li>
                                     </ul>
                                     <Link
@@ -179,12 +206,13 @@ const Pricing = () => {
 
                                 {/* Section Start */}
                                 <section className="flex flex-col rounded-3xl px-6 sm:px-8 bg-gradient-to-tr from-blue-600 to-akauntme-2 py-8 lg:order-none">
-                                    <h3 className="mt-5 font-display text-lg text-white">Small business</h3>
+                                    <h3 className="mt-5 font-display text-lg text-white">Growth Plan – “Scale”</h3>
                                     <p className="mt-2 text-base text-white">
-                                        Perfect for small / medium sized businesses.
+                                        For growing businesses needing smarter insights & collaboration.
+
                                     </p>
                                     <p className="order-first font-display text-5xl font-light tracking-tight text-white">
-                                        &#8358;3000 <span className='text-base'>per Month</span>
+                                        &#8358;14,999 <span className='text-base'>per Month</span>
                                     </p>
                                     <ul
                                         role="list"
@@ -209,7 +237,7 @@ const Pricing = () => {
                                                     strokeLinejoin="round"
                                                 />
                                             </svg>
-                                            <span className="ml-4">Send 25 quotes and invoices</span>
+                                            <span className="ml-4">Automated Invoicing & Recurring Billing</span>
                                         </li>
                                         <li className="flex">
                                             <svg
@@ -230,7 +258,7 @@ const Pricing = () => {
                                                     strokeLinejoin="round"
                                                 />
                                             </svg>
-                                            <span className="ml-4">Connect up to 5 bank accounts</span>
+                                            <span className="ml-4">Customer &amp; Supplier Management</span>
                                         </li>
                                         <li className="flex">
                                             <svg
@@ -251,7 +279,7 @@ const Pricing = () => {
                                                     strokeLinejoin="round"
                                                 />
                                             </svg>
-                                            <span className="ml-4">Track up to 50 expenses per month</span>
+                                            <span className="ml-4">Restock Alerts &amp; Inventory Thresholds</span>
                                         </li>
                                         <li className="flex">
                                             <svg
@@ -272,7 +300,7 @@ const Pricing = () => {
                                                     strokeLinejoin="round"
                                                 />
                                             </svg>
-                                            <span className="ml-4">Automated payroll support</span>
+                                            <span className="ml-4">Export to PDF/CSV Reports</span>
                                         </li>
                                         <li className="flex">
                                             <svg
@@ -293,7 +321,7 @@ const Pricing = () => {
                                                     strokeLinejoin="round"
                                                 />
                                             </svg>
-                                            <span className="ml-4">Export up to 12 reports</span>
+                                            <span className="ml-4">Smart Notifications (low stock, due payments, etc.)</span>
                                         </li>
                                         <li className="flex">
                                             <svg
@@ -314,7 +342,7 @@ const Pricing = () => {
                                                     strokeLinejoin="round"
                                                 />
                                             </svg>
-                                            <span className="ml-4">Bulk reconcile transactions</span>
+                                            <span className="ml-4">Multi-user (up to 5 staff accounts)</span>
                                         </li>
                                         <li className="flex">
                                             <svg
@@ -352,14 +380,15 @@ const Pricing = () => {
                                 {/* Section Start */}
                                 <section className="flex flex-col rounded-3xl px-6 sm:px-8 shadow-sm shadow-blue-400/50 py-8 lg:order-none">
 
-                                    <h3 className="mt-5 font-display text-lg text-slate-900">Enterprise</h3>
+                                    <h3 className="mt-5 font-display text-lg text-slate-900">Enterprise Plan – “Pro+”</h3>
                                     <p className="mt-2 text-base text-slate-600">
-                                        For even the bigger enterprise companies.
+                                        Designed for serious businesses with complex operations and staff workflows.
+
                                     </p>
                                     <div className='flex items-center order-first justify-between'>
                                         <p className=" font-display text-5xl font-light tracking-tight
                                      text-slate-800">
-                                            &#8358;5000
+                                            &#8358;29,999
                                         </p>
                                         <div className='rounded-full py-2 px-3 text-white text-sm bg-gradient-to-tr from-teal-500 to-blue-500 shadow-inner shadow-blue-400'>
                                             Coming soon
@@ -369,6 +398,27 @@ const Pricing = () => {
                                     <ul
                                         role="list"
                                         className="order-last mt-10 flex flex-col gap-y-3 text-sm text-slate-600">
+                                        <li className="flex">
+                                            <svg
+                                                aria-hidden="true"
+                                                className="h-6 w-6 flex-none fill-current stroke-current text-slate-400"
+                                            >
+                                                <path
+                                                    d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
+                                                    strokeWidth={0}
+                                                />
+                                                <circle
+                                                    cx={12}
+                                                    cy={12}
+                                                    r="8.25"
+                                                    fill="none"
+                                                    strokeWidth="1.5"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                />
+                                            </svg>
+                                            <span className="ml-4">Role-based Access & Permissions</span>
+                                        </li>
                                         <li className="flex">
                                             <svg
                                                 aria-hidden="true"
@@ -409,7 +459,7 @@ const Pricing = () => {
                                                     strokeLinejoin="round"
                                                 />
                                             </svg>
-                                            <span className="ml-4">Connect up to 15 bank accounts</span>
+                                            <span className="ml-4">Integration with MarketMe for Product + Service Listing</span>
                                         </li>
                                         <li className="flex">
                                             <svg
@@ -430,7 +480,7 @@ const Pricing = () => {
                                                     strokeLinejoin="round"
                                                 />
                                             </svg>
-                                            <span className="ml-4">Track up to 200 expenses per month</span>
+                                            <span className="ml-4">AI Insights & Business Recommendations</span>
                                         </li>
                                         <li className="flex">
                                             <svg
@@ -451,8 +501,9 @@ const Pricing = () => {
                                                     strokeLinejoin="round"
                                                 />
                                             </svg>
-                                            <span className="ml-4">Automated payroll support</span>
+                                            <span className="ml-4">Custom Branded Invoices & Receipts</span>
                                         </li>
+
                                         <li className="flex">
                                             <svg
                                                 aria-hidden="true"
@@ -472,7 +523,52 @@ const Pricing = () => {
                                                     strokeLinejoin="round"
                                                 />
                                             </svg>
-                                            <span className="ml-4">Export up to 25 reports, including TPS</span>
+                                            <span className="ml-4">Priority Email + Chat Support with your customers</span>
+                                        </li>
+
+                                        <li className="flex">
+                                            <svg
+                                                aria-hidden="true"
+                                                className="h-6 w-6 flex-none fill-current stroke-current text-slate-400"
+                                            >
+                                                <path
+                                                    d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
+                                                    strokeWidth={0}
+                                                />
+                                                <circle
+                                                    cx={12}
+                                                    cy={12}
+                                                    r="8.25"
+                                                    fill="none"
+                                                    strokeWidth="1.5"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                />
+                                            </svg>
+                                            <span className="ml-4">10+ Staff Accounts with Audit Logs</span>
+                                        </li>
+
+
+                                        <li className="flex">
+                                            <svg
+                                                aria-hidden="true"
+                                                className="h-6 w-6 flex-none fill-current stroke-current text-slate-400"
+                                            >
+                                                <path
+                                                    d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
+                                                    strokeWidth={0}
+                                                />
+                                                <circle
+                                                    cx={12}
+                                                    cy={12}
+                                                    r="8.25"
+                                                    fill="none"
+                                                    strokeWidth="1.5"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                />
+                                            </svg>
+                                            <span className="ml-4">Priority Email + Chat Support</span>
                                         </li>
                                     </ul>
                                     <Link
@@ -489,6 +585,65 @@ const Pricing = () => {
                             </div>
                         </div>
                     </section>
+
+                    <div className='mx-6 lg:mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-10'>
+                        <div className="bg-white text-gray-800">
+                            <h2 className="text-3xl font-bold text-center mb-10">Benefits for each Plan</h2>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                {/* Launch Plan */}
+                                <div className="border rounded-2xl shadow p-6 flex flex-col justify-between">
+                                    <div>
+                                        <h3 className="text-xl font-semibold mb-2">Launch</h3>
+                                        <p className="text-sm mb-4">Perfect for solo entrepreneurs & small businesses just getting started.</p>
+                                        <p className="text-3xl font-bold">₦5,000<span className="text-sm font-medium">/month</span></p>
+                                        <ul className="mt-6 space-y-3 text-sm">
+                                            <li>Get started quickly with a simple, intuitive interface</li>
+                                            <li>Stay organized with receipts and transactions</li>
+                                            <li>Monitor your daily growth without getting overwhelmed</li>
+                                            <li>Access from web & mobile web Application</li>
+                                        </ul>
+                                    </div>
+                                    <button className="mt-6 bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition">Get Started</button>
+                                </div>
+
+                                {/* Scale Plan */}
+                                <div className="border-2 border-blue-600 rounded-2xl shadow-lg p-6 flex flex-col justify-between bg-blue-50">
+                                    <div>
+                                        <h3 className="text-xl font-semibold text-blue-700 mb-2">Scale</h3>
+                                        <p className="text-sm mb-4">For growing businesses needing smarter insights & collaboration.</p>
+                                        <p className="text-3xl font-bold text-blue-700">₦15,000<span className="text-sm font-medium">/month</span></p>
+                                        <ul className="mt-6 space-y-3 text-sm">
+                                            <li>Scale with intelligent tools without hiring more staff</li>
+                                            <li>Collaborate with team members securely</li>
+                                            <li>Automate key tasks to save hours weekly</li>
+                                            <li>Never run out of stock or miss a receipt</li>
+                                        </ul>
+                                    </div>
+                                    <button className="mt-6 bg-blue-700 text-white py-2 rounded-xl hover:bg-blue-800 transition">Upgrade Now</button>
+                                </div>
+
+                                {/* Pro+ Plan */}
+                                <div className="border rounded-2xl shadow p-6 flex flex-col justify-between">
+                                    <div>
+                                        <h3 className="text-xl font-semibold mb-2">Pro+</h3>
+                                        <p className="text-sm mb-4">Designed for serious businesses with complex operations and staff workflows.</p>
+                                        <p className="text-3xl font-bold">₦30,000<span className="text-sm font-medium">/month</span></p>
+                                        <ul className="mt-6 space-y-3 text-sm">
+                                            <li>Run a fully integrated business platform in one place</li>
+                                            <li>Get strategic insights to increase profit margins</li>
+                                            <li>ontrol your team&apos;s actions with full transparency</li>
+                                            <li>MarketMe Integration</li>
+                                            <li>Inventory API Sync</li>
+                                            <li>AI Insights</li>
+                                            <li>Expand with ecommerce or retail partnerships easily</li>
+                                            <li>API & Priority Support</li>
+                                        </ul>
+                                    </div>
+                                    <button className="mt-6 bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition">Go Pro</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 

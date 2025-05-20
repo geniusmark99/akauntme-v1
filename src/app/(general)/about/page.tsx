@@ -68,13 +68,13 @@ const About = () => {
 
                         </div>
 
-                        <div className='py-10 px-7 lg:py-20 flex flex-col justify-center items-center gap-y-4 text-center bg-gradient-to-r from-blue-600 via-indigo-500 to-teal-500  text-white'>
+                        <div className='py-10 px-7 lg:py-20 flex flex-col justify-center items-center gap-y-4 text-center bg-gradient-to-r from-blue-600 to-teal-500  text-white'>
                             <h2 className='text-xl md:text-2xl max-w-7xl'>
                                 Launched in 2025,
                                 At Akauntme, we believe that every business — whether it&apos;s a small startup or an established company—deserves to have their financial story told with clarity and purpose. Our journey began when we realized that the existing tools weren’t telling that story the right way. For too long, businesses were forced to rely on complex, hard-to-navigate software that treated inventory and financial data as mere numbers, not as living, breathing aspects of their growth.
                             </h2>
                             <div className='h-[0.5px] mx-auto container bg-gray-300'></div>
-                            <div className='grid gap-4 grid-cols-2 md:grid-cols-4  w-full max-w-5xl mt-4'>
+                            {/* <div className='grid gap-4 grid-cols-2 md:grid-cols-4  w-full max-w-5xl mt-4'>
                                 <div className='flex flex-col items-center justify-center gap-y-1'>
                                     <h1 className='uppercase font-semibold text-2xl lg:text-4xl'>10M</h1>
                                     <span className='text-gray-200'>MAUS</span>
@@ -96,10 +96,10 @@ const About = () => {
                                     <h1 className='uppercase font-semibold text-2xl lg:text-4xl'>10+</h1>
                                     <span className='text-gray-200'>Languages</span>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
 
-                        <div className='py-10 px-7 lg:py-20'>
+                        {/* <div className='py-10 px-7 lg:py-20'>
 
                             <h1 className='text-center text-2xl md:text-5xl font-extrabold tracking-wide  text-blue-950'>
                                 A Brief History
@@ -158,7 +158,7 @@ const About = () => {
                                 </div>
                             </div>
 
-                        </div>
+                        </div> */}
 
                         <div className='py-10 px-7 lg:py-20'>
 
@@ -220,7 +220,7 @@ const About = () => {
                             <h2 className="relative text-center  mt-5 mb-10 text-2xl font-semibold leading-tight lg:text-3xl">
 
                             </h2>
-                            <div className="grid w-full grid-cols-2 gap-10 sm:grid-cols-3 lg:grid-cols-4">
+                            <div className="grid w-full grid-cols-1 gap-10 lg:grid-cols-3">
                                 <div className="flex flex-col items-center justify-center col-span-1">
                                     <div className="relative p-5">
                                         <div className="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-blue-50" />
@@ -229,36 +229,18 @@ const About = () => {
                                             alt="Image"
                                             width={500}
                                             height={500}
-                                            className="relative z-20 w-full rounded-full"
-                                            src="https://cdn.devdojo.com/images/june2021/avt-03.jpg"
+                                            className="relative z-20 w-[300px] rounded-full"
+                                            src="/images/mark-okechukwu.jpg"
                                         />
                                     </div>
                                     <div className="mt-3 space-y-2 text-center">
                                         <div className="space-y-1 text-lg font-medium leading-6">
                                             <h3>Mark Okechukwu</h3>
-                                            <p className="text-akauntme-deep">CEO and Founder</p>
+                                            <p className="text-akauntme-deep">Founder and Software Developer</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="flex flex-col items-center justify-center col-span-1">
-                                    <div className="relative p-5">
-                                        <div className="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-green-50" />
-                                        <Image
-                                            priority
-                                            alt="Image"
-                                            width={500}
-                                            height={500}
-                                            className="relative z-20 w-full rounded-full"
-                                            src="https://cdn.devdojo.com/images/june2021/avt-07.jpg"
-                                        />
-                                    </div>
-                                    <div className="mt-3 space-y-2 text-center">
-                                        <div className="space-y-1 text-lg font-medium leading-6">
-                                            <h3>Carl Jones</h3>
-                                            <p className="text-akauntme-deep text-[14px]">CTO and Co-Founder</p>
-                                        </div>
-                                    </div>
-                                </div>
+
                                 <div className="flex flex-col items-center justify-center col-span-1">
                                     <div className="relative p-5">
                                         <div className="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-pink-50" />
@@ -267,14 +249,14 @@ const About = () => {
                                             alt="Image"
                                             width={500}
                                             height={500}
-                                            className="relative z-20 w-full rounded-full"
-                                            src="https://cdn.devdojo.com/images/june2021/avt-20.jpg"
+                                            className="relative z-20 w-[300px] rounded-full"
+                                            src="/images/victoria-ambah-2.jpeg"
                                         />
                                     </div>
                                     <div className="mt-3 space-y-2 text-center">
                                         <div className="space-y-1 text-lg font-medium leading-6">
-                                            <h3>Susan Peterson</h3>
-                                            <p className="text-akauntme-deep">Marketing Directory</p>
+                                            <h3>Victoria Ambah</h3>
+                                            <p className="text-akauntme-deep">Head Marketing Directory</p>
                                         </div>
                                     </div>
                                 </div>
@@ -287,92 +269,17 @@ const About = () => {
                                             width={500}
                                             height={500}
                                             className="relative z-20 w-full rounded-full"
-                                            src="https://cdn.devdojo.com/images/june2021/avt-09.jpg"
+                                            src="/images/mustapha-adeyemi.jpeg"
                                         />
                                     </div>
                                     <div className="mt-3 space-y-2 text-center">
                                         <div className="space-y-1 text-lg font-medium leading-6">
-                                            <h3>Tommy Barnes</h3>
-                                            <p className="text-akauntme-deep">Designer</p>
+                                            <h3>Mustapha Adeyemi</h3>
+                                            <p className="text-akauntme-deep">Head Graphics Designer</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="flex flex-col items-center justify-center col-span-1">
-                                    <div className="relative p-5">
-                                        <div className="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-green-50" />
-                                        <Image
-                                            priority
-                                            alt="Image"
-                                            width={500}
-                                            height={500}
-                                            className="relative z-20 w-full rounded-full"
-                                            src="https://cdn.devdojo.com/images/june2021/avt-14.jpg"
-                                        />
-                                    </div>
-                                    <div className="mt-3 space-y-2 text-center">
-                                        <div className="space-y-1 text-lg font-medium leading-6">
-                                            <h3>Ron Jenson</h3>
-                                            <p className="text-akauntme-deep">Senior Developer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex flex-col items-center justify-center col-span-1">
-                                    <div className="relative p-5">
-                                        <div className="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-pink-50" />
-                                        <Image
-                                            priority
-                                            alt="Image"
-                                            width={500}
-                                            height={500}
-                                            className="relative z-20 w-full rounded-full"
-                                            src="https://cdn.devdojo.com/images/june2021/avt-13.jpg"
-                                        />
-                                    </div>
-                                    <div className="mt-3 space-y-2 text-center">
-                                        <div className="space-y-1 text-lg font-medium leading-6">
-                                            <h3>Pete Tompkins</h3>
-                                            <p className="text-akauntme-deep">Web Developer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex flex-col items-center justify-center col-span-1">
-                                    <div className="relative p-5">
-                                        <div className="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-green-50" />
-                                        <Image
-                                            priority
-                                            alt="Image"
-                                            width={500}
-                                            height={500}
-                                            className="relative z-20 w-full rounded-full"
-                                            src="https://cdn.devdojo.com/images/june2021/avt-16.jpg"
-                                        />
-                                    </div>
-                                    <div className="mt-3 space-y-2 text-center">
-                                        <div className="space-y-1 text-lg font-medium leading-6">
-                                            <h3>Kelly Richards</h3>
-                                            <p className="text-akauntme-deep">Sales Manager</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex flex-col items-center justify-center col-span-1">
-                                    <div className="relative p-5">
-                                        <div className="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-blue-50" />
-                                        <Image
-                                            priority
-                                            alt="Image"
-                                            width={500}
-                                            height={500}
-                                            className="relative z-20 w-full rounded-full"
-                                            src="https://cdn.devdojo.com/images/june2021/avt-08.jpg"
-                                        />
-                                    </div>
-                                    <div className="mt-3 space-y-2 text-center">
-                                        <div className="space-y-1 text-lg font-medium leading-6">
-                                            <h3>Alexis Jordan</h3>
-                                            <p className="text-akauntme-deep">Affiliate Manager</p>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </section>

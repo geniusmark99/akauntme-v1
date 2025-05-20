@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { LogoIcon } from "../icons";
 
 const FooterWidget = () => {
@@ -11,8 +12,9 @@ const FooterWidget = () => {
                                 <LogoIcon className="fill-white w-32 h-10" type='alone' />
                             </a>
                             <p className="max-w-sm mt-2 text-white ">
-                                Join 10,000+ other businesses in using Akauntme new tips, tutorials, and
-                                more.
+                                Akauntme is a smart, user-friendly bookkeeping and business management application built specifically for small businesses, startups, and solo entrepreneurs.
+                                {/* Join 10,000+ other businesses in using Akauntme new tips, tutorials, and
+                                more. */}
                             </p>
                             <div className="flex mt-6 -mx-2">
                                 <a
@@ -63,39 +65,53 @@ const FooterWidget = () => {
                     <div className="mt-6 lg:mt-0 lg:flex-1">
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                             <div>
-                                <h3 className="text-gray-100 tracking-wide uppercase  font-semibold">About</h3>
-                                <a
-                                    href="#"
+                                <h3 className="text-gray-100 tracking-wide uppercase  font-semibold">Company</h3>
+                                <Link
+                                    href="/about"
                                     className="block mt-2 text-sm text-white  hover:underline"
                                 >
-                                    Company
-                                </a>
+                                    About us
+                                </Link>
+
+                                <Link
+                                    href="/pricing"
+                                    className="block mt-2 text-sm text-white  hover:underline"
+                                >
+                                    Pricing
+                                </Link>
                                 <a
                                     href="#"
                                     className="block mt-2 text-sm text-white  hover:underline"
                                 >
                                     Community &amp; Team
                                 </a>
-                                <a
-                                    href="#"
+                                <Link
+                                    href="/contact-us"
                                     className="block mt-2 text-sm text-white  hover:underline"
                                 >
-                                    Careers
-                                </a>
+                                    Contact us
+                                </Link>
                             </div>
                             <div>
-                                <h3 className="text-gray-100 tracking-wide uppercase  font-semibold">Blog</h3>
+                                <h3 className="text-gray-100 tracking-wide uppercase  font-semibold">Resources</h3>
                                 <a
                                     href="#"
                                     className="block mt-2 text-sm text-white  hover:underline"
                                 >
-                                    Techs
+                                    Blogs
                                 </a>
                                 <a
                                     href="#"
                                     className="block mt-2 text-sm text-white  hover:underline"
                                 >
-                                    Design Patterns
+                                    Help center
+                                </a>
+
+                                <a
+                                    href="#"
+                                    className="block mt-2 text-sm text-white  hover:underline"
+                                >
+                                    Terms &amp; Privacy
                                 </a>
                                 <a
                                     href="#"
@@ -126,12 +142,7 @@ const FooterWidget = () => {
                                 >
                                     Servikpoint
                                 </a>
-                                <a
-                                    href="#"
-                                    className="block mt-2 text-sm text-white  hover:underline"
-                                >
-                                    Sellapoint
-                                </a>
+
                                 <a
                                     href="#"
                                     className="block mt-2 text-sm text-white  hover:underline"
@@ -142,7 +153,7 @@ const FooterWidget = () => {
                             <div>
                                 <h3 className="text-gray-100 tracking-wide uppercase  font-semibold">Contact</h3>
                                 <span className="block mt-2 text-sm text-white  hover:underline">
-                                    +1 526 654 8965
+                                    +2348141625004
                                 </span>
                                 <span className="block mt-2 text-sm text-white  hover:underline">
                                     hello@akauntme.com
@@ -154,7 +165,7 @@ const FooterWidget = () => {
                 <hr className="h-px my-6 bg-gray-200 border-none dark:bg-gray-700" />
                 <div>
                     <p className="text-center text-white ">
-                        © Akauntme 2024 - All rights reserved
+                        © Akauntme 2025 - All rights reserved
                     </p>
                 </div>
             </div>
