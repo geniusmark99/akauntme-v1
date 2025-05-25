@@ -94,6 +94,7 @@ const MainAuthWidget: React.FC<MainAuthProps> = ({ children, className, user }) 
         },
         {
             id: 5, name: "MarketMe",
+            coming: true,
             icon: <MarketplaceIcon type="filled" className='size-5 fill-current' />,
             link: '/marketme',
             title: 'MarketMe'
@@ -157,7 +158,7 @@ const MainAuthWidget: React.FC<MainAuthProps> = ({ children, className, user }) 
 
                 <div className="flex flex-col justify-between h-full p-4  relative">
                     <div>
-                        <div className='border-b border-white/20 shadow-sm py-3 text-center flex items-center justify-center 
+                        <div className='border-b border-white/20 py-3 text-center flex items-center justify-center 
                         '>
 
                             <h1 className={`text-white flex items-center gap-x-2 font-bold text-xl ${isExpanded ? "block" : "hidden"} text-center`}>
@@ -202,8 +203,9 @@ const MainAuthWidget: React.FC<MainAuthProps> = ({ children, className, user }) 
 
 
 
-                                                <div className={` ${isExpanded ? "block" : "hidden"} text-sm font-semibold p-1 rounded-md`}>
+                                                <div className={` ${isExpanded ? "block" : "hidden"} text-sm font-semibold p-1 rounded-md relative`}>
                                                     {e.name}
+                                                    {e.coming && <div className="absolute -top-2 -right-0 bg-linear-90 from-teal-500 to-10% to-teal-500 text-white rounded-full px-1 text-[10px]">Coming soon</div>}
                                                 </div>
                                             </Link>
                                         </motion.li>

@@ -26,7 +26,7 @@ const About = () => {
                 </div>
 
                 <div className='pt-24'>
-                    <section className="relative  overflow-hidden bg-white" style={{ backgroundImage: 'url("/images/ring-effect-2.svg")', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', }}>
+                    <section className="relative  overflow-hidden bg-white" >
                         <div className='mt-2 flex flex-col justify-center items-center gap-y-4 lg:mt-10 text-center text-2xl md:text-5xl font-extrabold tracking-wide text-akauntme-2'>
                             <LogoIcon type='alone' className='fill-current size-20' />
                             <span className='text-transparent bg-clip-text bg-gradient-to-r from-akauntme-deep via-teal-500 to-cyan-500'>
@@ -71,7 +71,7 @@ const About = () => {
                         <div className='py-10 px-7 lg:py-20 flex flex-col justify-center items-center gap-y-4 text-center bg-gradient-to-r from-blue-600 to-teal-500  text-white'>
                             <h2 className='text-xl md:text-2xl max-w-7xl'>
                                 Launched in 2025,
-                                At Akauntme, we believe that every business — whether it&apos;s a small startup or an established company—deserves to have their financial story told with clarity and purpose. Our journey began when we realized that the existing tools weren’t telling that story the right way. For too long, businesses were forced to rely on complex, hard-to-navigate software that treated inventory and financial data as mere numbers, not as living, breathing aspects of their growth.
+                                At Akauntme, we believe that every business — whether it&apos;s a small startup or an established company—deserves to have their financial story told with clarity and purpose. Our journey began when we realized that the existing tools weren&apos;t telling that story the right way. For too long, businesses were forced to rely on complex, hard-to-navigate software that treated inventory and financial data as mere numbers, not as living, breathing aspects of their growth.
                             </h2>
                             <div className='h-[0.5px] mx-auto container bg-gray-300'></div>
                             {/* <div className='grid gap-4 grid-cols-2 md:grid-cols-4  w-full max-w-5xl mt-4'>
@@ -99,66 +99,7 @@ const About = () => {
                             </div> */}
                         </div>
 
-                        {/* <div className='py-10 px-7 lg:py-20'>
 
-                            <h1 className='text-center text-2xl md:text-5xl font-extrabold tracking-wide  text-blue-950'>
-                                A Brief History
-                            </h1>
-
-                            <div className='flex justify-center mt-4 lg:mt-10'>
-
-                                <div className='max-w-[72rem]'>
-                                    <div className='group relative flex gap-x-3'>
-                                        <div className='min-w-[50px] '>
-                                            <h2>2023</h2>
-                                        </div>
-                                        <div className="relative after:absolute after:top-7 after:content-[''] after:bottom-1 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-300 ">
-                                            <div className="relative justify-center size-[1rem] z-10 flex items-center left-1">
-                                                <div className=" bg-gray-400 rounded-full size-2"></div>
-                                            </div>
-                                        </div>
-                                        <div className='pb-10 flex-grow'>
-                                            <div className='grid grid-cols-1 gap-y-4 lg:grid-cols-2 '>
-
-                                                <p className="dark:text-neutral-500 max-w-[400px]">
-                                                    Initial concept for Preline begins, inspired by the need for a streamlined UI component library built rjx3z Tailwind CSS.
-                                                </p>
-
-                                                <div className='rounded-2xl'>
-                                                    <Image src="/images/planning.jfif" className='rounded-2xl' priority width={500} height={500} alt='A man planning with a woman' />
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    <div className='group relative flex gap-x-3'>
-                                        <div className='min-w-[50px] '>
-                                            <h2>2023</h2>
-                                        </div>
-                                        <div className="relative after:absolute after:top-7 after:content-[''] after:bottom-1 after:start-3 after:w-px after:-translate-x-[0.5px] after:bg-gray-300 ">
-                                            <div className="relative justify-center size-[1rem] z-10 flex items-center left-1">
-                                                <div className=" bg-gray-400 rounded-full size-2"></div>
-                                            </div>
-                                        </div>
-                                        <div className='pb-10 flex-grow'>
-                                            <div className='grid grid-cols-1 gap-y-4 lg:grid-cols-2 '>
-
-                                                <p className="dark:text-neutral-500 max-w-[400px]">
-                                                    Initial concept for Preline begins, inspired by the need for a streamlined UI component library built rjx3z Tailwind CSS.
-                                                </p>
-
-                                                <div className='rounded-2xl bg-red-700'>
-                                                    <Image src="/images/planning.jfif" className='rounded-2xl' priority width={500} height={500} alt='A man planning with a woman' />
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div> */}
 
                         <div className='py-10 px-7 lg:py-20'>
 
