@@ -11,8 +11,8 @@ const BlogPosts: BlogPost[] = [
     category: 'People',
     image: '/images/lady.webp', // place this image in your /public/images folder
     content: `
-      <p>This is a story of transformation and persistence. I started in customer support but always had an interest in tech...</p>
-      <p>I eventually learned frontend development, built projects, and applied for jobs until I got my first role.</p>
+    This is a story of transformation and persistence. I started in customer support but always had an interest in tech...
+    I eventually learned frontend development, built projects, and applied for jobs until I got my first role.
     `,
   },
   {
@@ -24,7 +24,7 @@ const BlogPosts: BlogPost[] = [
     category: 'People',
     image: '/images/victoria-ambah.jpeg',
     content: `
-      <p>Relocating while staying consistent in my tech journey was a huge challenge. Here's how I navigated learning and adapting across two countries...</p>
+    Relocating while staying consistent in my tech journey was a huge challenge. Here's how I navigated learning and adapting across two countries...
     `,
   },
   {
@@ -36,12 +36,10 @@ const BlogPosts: BlogPost[] = [
     category: 'Career',
     image: '/images/Fastest-checkout-copy.webp',
     content: `
-      <ul>
         <li>1. LinkedIn</li>
         <li>2. Indeed</li>
         <li>3. HNG Careers</li>
         <li>...and more.</li>
-      </ul>
     `,
   },
   {
@@ -53,7 +51,20 @@ const BlogPosts: BlogPost[] = [
     category: 'Workplace',
     image: '/images/man-seating.webp',
     content: `
-      <p>The flexibility of remote work is reshaping how teams collaborate. Developers are no longer tied to one location...</p>
+    The flexibility of remote work is reshaping how teams collaborate. Developers are no longer tied to one location...
+    `,
+  },
+
+  {
+    id: 5,
+    title: 'Code From Anywhere: Why Remote Work is the Future of Tech',
+    slug: 'remote-work-future-of-tech',
+    author: 'Victoria Ambah',
+    date: '2024-07-01',
+    category: 'Workplace',
+    image: '/images/head-banner.webp',
+    content: `
+    The flexibility of remote work is reshaping how teams collaborate. Developers are no longer tied to one location...
     `,
   },
 ];

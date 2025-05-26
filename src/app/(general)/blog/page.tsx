@@ -1,5 +1,7 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import BlogSliderWidget from "./components/BlogSliderWidget";
+import BlogPosts from './types/BlogPosts';
 import { HeaderWidget, FooterWidget } from "@/components/shared/general";
 
 
@@ -47,10 +49,42 @@ const Blog = () => {
                     </div>
                 </div>
 
+                <div className='flex justify-center mt-10'>
+                    <div className='px-4 pt-5 gap-y-10 md:gap-x-3 w-full max-w-screen-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+
+
+                        {BlogPosts.map((blog, idx) => (
+
+                            <Link key={idx} href={`/blog/${blog.slug}`} className='block hover:shadow-lg shadow-akauntme-2/50 transition-shadow duration-300 rounded-lg p-4 bg-white border-2 border-akauntme-2 hover:border-akauntme-2/50'>
+                                <Image src={blog.image} alt='Blog Post Image' width={250} height={216} className='w-full h-[350px] rounded-lg object-cover mb-4' />
+                                <div>
+                                    <div className='flex justify-between items-center mb-2 text-sm'>
+                                        <h6 className='text-blue-700 font-semibold'>{blog.category}</h6>
+                                        <p className='text-gray-500'>{blog.date}</p>
+                                    </div>
+                                    <h4 className='text-[max(16px,_1.4rem)] font-semibold text-blue-950 '>
+                                        {blog.title}
+                                    </h4>
+                                    <p className='italic text-gray-500 mt-2 font-semibold'>
+                                        By {blog.author}
+                                    </p>
+                                </div>
+                            </Link>
+                        ))}
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
 
             </div>
 
-        </main>
+        </main >
         <FooterWidget />
     </>
 }

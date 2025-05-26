@@ -31,7 +31,7 @@ const HeaderWidget = () => {
 
     return (
         <>
-            <header className={` ${isScrolled ? 'border-transparent bg-transparent' : 'border-transparent bg-transparent'} border-b transition-all fixed w-full z-50 `}>
+            <header className={` ${isScrolled ? 'border-transparent bg-white' : 'border-transparent bg-transparent'} border-b transition-all fixed w-full z-50 `}>
                 <nav className='flex items-center mt-4 justify-between mx-2 md:mx-5 lg:mx-20 p-2'>
                     <div className='flex item-center gap-x-2 justify-start h-full w-auto z-20 relative overflow-visible'>
                         <div className={` ${isScrolled ? ' border-akauntme-deep/50' : 'border-transparent'} bg-white border transition-all relative rounded-full flex items-center  py-1 md:py-2 px-4
