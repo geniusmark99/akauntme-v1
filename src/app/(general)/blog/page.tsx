@@ -15,8 +15,8 @@ const Blog = () => {
             <div className='pt-20 relative'>
                 {/* style={{ clipPath: 'ellipse(90% 70% at 50% 30%)' }} */}
                 <div className="bg-cover bg-[60%] bg-no-repeat relative z-30 h-auto flex  justify-center items-center bg-blue-50 flex-col  px-4 pt-5 md:px-20 md:p-10">
-                    <h1 className='text-center lg:lead text-3xl md:text-3xl pt-10 pb-5 lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-500'>AkauntBook Blog</h1>
-                    <p className='max-w-[500px] text-center mt-5 mb-12 text-blue-950'>
+                    <h1 className='text-center lg:lead text-3xl md:text-3xl pt-10 pb-5 lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-500 font-[500]'>AkauntMe Blog</h1>
+                    <p className='max-w-[500px] text-sm md:text-base text-center mt-5 mb-12 text-blue-950'>
                         Get behind the scenes on our process, exciting news, and the people making dreams come true for hundreds of businesses.
                     </p>
                     <BlogSliderWidget />
@@ -33,13 +33,13 @@ const Blog = () => {
                             </div>
                             <div>
                                 <div className='flex items-center gap-x-1  md:w-[400px]'>
-                                    <div className='w-full flex items-center relative'>
+                                    <div className='w-full flex items-center relative group'>
                                         <div className='absolute inset-2 w-8 flex justify-center items-center'>
-                                            <svg className='size-5 fill-akauntme-dark' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" >
+                                            <svg className='size-5 group-focus:fill-akauntme-2 fill-akauntme-2/90' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" >
                                                 <path d="M20.5 6C12.509634 6 6 12.50964 6 20.5C6 28.49036 12.509634 35 20.5 35C23.956359 35 27.133709 33.779044 29.628906 31.75L39.439453 41.560547 A 1.50015 1.50015 0 1 0 41.560547 39.439453L31.75 29.628906C33.779044 27.133709 35 23.956357 35 20.5C35 12.50964 28.490366 6 20.5 6 z M 20.5 9C26.869047 9 32 14.130957 32 20.5C32 23.602612 30.776198 26.405717 28.791016 28.470703 A 1.50015 1.50015 0 0 0 28.470703 28.791016C26.405717 30.776199 23.602614 32 20.5 32C14.130953 32 9 26.869043 9 20.5C9 14.130957 14.130953 9 20.5 9 z" />
                                             </svg>
                                         </div>
-                                        <input type="search" placeholder='Search Blog' className='w-full indent-6 border-2 border-gray-400 focus:border-akauntme-2 outline-0 focus:outline-0 rounded-xl px-4 py-3' />
+                                        <input type="search" placeholder='Search Blog' className='placeholder:text-gray-700 w-full indent-6 border-2 border-akauntme-2/50 focus:border-akauntme-2 outline-0 focus:outline-0 rounded-xl px-4 py-3' />
 
                                     </div>
                                     <button className='bg-akauntme-2 text-white rounded-xl px-4 py-3'>Search</button>
@@ -55,7 +55,7 @@ const Blog = () => {
 
                         {BlogPosts.map((blog, idx) => (
 
-                            <Link key={idx} href={`/blog/${blog.slug}`} className='block hover:shadow-lg shadow-akauntme-2/50 transition-shadow duration-300 rounded-lg p-4 bg-white border-2 border-akauntme-2 hover:border-akauntme-2/50'>
+                            <Link key={idx} href={`/blog/${blog.slug}`} className='block hover:shadow-lg shadow-akauntme-2/50 transition-shadow duration-300 rounded-lg p-4 bg-white border-2 border-transparent hover:border-akauntme-2/50'>
                                 <Image src={blog.image} alt='Blog Post Image' width={250} height={216} className='w-full h-[350px] rounded-lg object-cover mb-4' />
                                 <div>
                                     <div className='flex justify-between items-center mb-2 text-sm'>
